@@ -5,8 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="课堂笔记mysql_day01, web前端,blog搭建,基础">
-    <meta name="description" content="复习软件开发流程  软件定义期    可行性研究阶段    需求分析阶段  软件开发期    概要设计阶段    详细设计阶段    编码实现阶段    测试阶段  软件维护期    项目部署阶段    项目维护阶段    服务器:  提供">
+    <meta name="keywords" content="课堂笔记mysql_day02, web前端,blog搭建,基础">
+    <meta name="description" content="复习网状数据库，层次型数据库，关系型数据库，非关系数据库MySQLserver-&amp;gt;database-&amp;gt;table-&amp;gt;row-&amp;gt;column 连接  mysql.exe -h127.0.0.1 -P3306 -uroo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>课堂笔记mysql_day01 | 我的博客</title>
+    <title>课堂笔记mysql_day02 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -245,13 +245,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        课堂笔记mysql_day01
+                        课堂笔记mysql_day02
                     </div>
                 </div>
             </div>
@@ -280,13 +280,10 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>复习<br>软件开发流程<br>  软件定义期<br>    可行性研究阶段<br>    需求分析阶段<br>  软件开发期<br>    概要设计阶段<br>    详细设计阶段<br>    编码实现阶段<br>    测试阶段<br>  软件维护期<br>    项目部署阶段<br>    项目维护阶段<br>    服务器:<br>  提供服务，功能强大的计算机<br>  访问服务器下的某一个服务器<br>    访问服务器 IP地址/域名  端口  协议<br>  访问服务器下的web服务器<br>    <a href="http://127.0.0.1:80" target="_blank" rel="noopener">http://127.0.0.1:80</a><br>    <a href="http://localhost:80" target="_blank" rel="noopener">http://localhost:80</a><br>    <a href="http://172.163.100.163:80" target="_blank" rel="noopener">http://172.163.100.163:80</a><br> 输入<a href="http://www.taobao.com" target="_blank" rel="noopener">http://www.taobao.com</a> 如何获取淘宝首页的。<br> 源码下载地址<br>  <a href="http://code.tarena.com.cn" target="_blank" rel="noopener">http://code.tarena.com.cn</a><br>  用户名：tarenacode  密码：code_2013</p>
-<p>今日目标：<br>项目中如何保存数据——数据库 （难点：单词）</p>
-<p>1.保存数据的几种形式<br> 内存  临时保存数据<br> 文件  不便于管理<br> 第三方机构  腾讯云，百度云，阿里云<br> 独立数据库服务器<br>2.数据库概述<br> Database：数据库，以特定的结构批量存储数据的软件。<br> 数据库的发展史<br>  网状数据库-&gt;层次型数据库-&gt;关系型数据库-&gt;非关系型数据库<br>关系型数据库中数据的逻辑结构<br>Server-&gt;Database-&gt;Table-&gt;Row-&gt;Column<br>服务器-&gt;数据库-&gt;表-&gt;行-&gt;列</p>
-<p>3.MySQL<br> MySQLDB分支：<a href="https://www.mysql.com/" target="_blank" rel="noopener">https://www.mysql.com/</a><br> MariaDB分支：<a href="https://mariadb.org/" target="_blank" rel="noopener">https://mariadb.org/</a></p>
-<p> xampp下载地址<br> <a href="https://www.apachefriends.org/download.html" target="_blank" rel="noopener">https://www.apachefriends.org/download.html</a><br>xampp是一个服务器套装，包含多款服务器软件。<br>d-&gt;Deamon 精灵，守护者<br>mysqld.exe 启动MySQL服务器<br>4.MySQL数据库系统：<br> (1)服务器端：<br>   负责存储数据<br>   C:/xampp/…./mysqld.exe<br> (2)客户端<br>   负责向服务器发起增删改查的命令<br>   C:/xampp/…/mysql.exe<br> (3)连接MySQL数据库服务器(打开xampp—–MySQL点开start——点开shell)<br>   mysql.exe  -h127.0.0.1  -P3306  -uroot  -p<br>   简写： mysql  -uroot<br>   -h 服务器的IP地址/域名  可以使用localhost<br>   -P 端口，MySQL服务使用3306端口<br>   -u 用户<br>   -p 密码<br> 练习：尝试使用错误的信息连接数据库服务器。<br>5.MySQL管理命令<br>  quit;   退出服务器连接<br>  show databases; 显示数据库服务器上当前所有的数据库<br> use 数据库名;  进入指定的数据库<br>  show tables;  显示当前数据库中所有的数据表<br>  desc 表名; 描述表中有哪些列(表头)<br>练习：查看phpmyadmin数据库下以下表都有哪些列<br>   pma__favorite  2<br>   pma__history   6<br>   pma__recent   2<br>6.MySQL常用的SQL命令（对数据进行操作）<br> SQL: Structured Query Language，结构化查询语言，用于操作关系型数据库服务器中的数据。——增删改查<br> SQL语言最早是由IBM提出，后提交给ISO，最终成为了数据库行业内的标准语言。分为多个版本:SQL-87、SQL-92、SQL-99。当前标准的SQL语言被绝大多数的关系型数据库所支持。<br>SQL命令的两种执行方式<br>(1)交互模式：客户端连接MySQL，输入一行，回车，服务器执行一行。适用于临时性的查看数据<br>   mysql -uroot   回车<br>(2)脚本模式：客户端把要执行的多行命令写在一个脚本文件中，一次性的提交给服务器执行。适用于批量的操作数据进行增删改查。（不能登入mysql之后去执行）<br>   mysql -uroot &lt; C:/xampp/…../02.sql   {此处是输入mysql -uroot &lt;  然后把脚本文件拖拽过来按回车}<br> 练习：创建02.sql脚本文件，在脚本中书写多个命令（显示所有数据库，进入PHPmyadmin，显示所有的数据表）提交给服务器执行，尝试写错其中一行，执行查看结果。<br>SQL语法规范<br> (1)每条SQL语句必须以英文分号作为结尾，一条语句可以跨越多行，见到分号认为结束。<br> (2)若第n条SQL语句有语法错误，则后续所有的语句不会再执行。<br> (3)SQL语句中不区分大小写。习惯上数据库关键字用大写，非关键字用小写。<br> (4)SQL语句还可以使用单行注释：#………. 或者多行注释: /<em>    …   </em>/，注释的内容不会被服务器所执行。<br>日常开发中常用的SQL命令</p>
-<p> (1)丢弃数据库，如果存在的话<br>   DROP  DATABASE  IF  EXISTS  jd;<br> (2)创建新的数据库<br>   CREATE  DATABASE  jd;<br> (3)进入刚刚创建的数据库<br>   USE jd;<br> (4)创建数据表<br>   CREATE TABLE student(<br>sid  INT,<br>     name  VARCHAR(6),<br>     sex  VARCHAR(1),<br>     score  INT<br>   );<br> (5)向数据表中插入记录<br>  INSERT  INTO  student  VALUES<br>(‘10’,’Tom’,’M’,’89’)；<br>(‘11’,’Kate’,’F’,’92’)<br>INSERT INTO student VALUES(“1”,”tom”,”M”,”80”);<br>INSERT INTO student VALUES(“2”,”jerry”,”M”,”82”);<br>（6）删除学号为3的学生的数据（删）<br> DELETE FROM student WHERE id=”3”;<br>（7） 修改学号为2的学生的成绩为66（改）<br> UPDATE student SET score=”66”,sex=”F” WHERE id=”2”;<br>…..;<br> (6)查询数据表所有的记录<br>  SELECT * FROM student;<br>练习：创建脚本文件05.sql；先丢弃数据库tedu，如果存在的话；创建数据库tedu;<br>练习：创建脚本文件06.sql; 先丢弃数据库xuezi，如果存在的话；创建数据表laptop，包含列有lid(编号)，title(标题)，price(价格)，number(数量)；插入3条记录，查询出所有记录。<br>SQL命令<br>标准SQL语句分类<br>DDL:DATA DEFINE LANGUAGE 定义数据结构<br>  Create/drop/alter<br>DML:Data Munipulate Language 操作数据<br>  INSERT/DELETE/UPDATE<br>DQL:Data Query Language 查询数据<br>SELECT<br>DCL:Data Control language 控制用户权限<br>    GRANT(授权)、REVOKE(收权)</p>
-<p>课后任务：<br>(1)    复习今天内容，保留注释，重新编写代码<br> (2)练习：<br>   创建脚本文件xz.sql，创建数据库xz；进入该数据库，创建数据表user，包含列uid编号，uname用户名，upwd密码，email邮箱，phone电话，sex性别，user_name真实姓名，registerTime注册时间eg:2018-12-10,isOnline是否在线 插入5条记录，删除其中2条数据，修改2条数据，最后<br>查询出所有记录。<br> (3)预习MySQL手册第11章列类型</p>
+                <p>复习<br>网状数据库，层次型数据库，关系型数据库，非关系数据库<br>MySQL<br>server-&gt;database-&gt;table-&gt;row-&gt;column<br> 连接<br>  mysql.exe -h127.0.0.1 -P3306 -uroot -p<br>  mysql -uroot<br> 脚本模式<br>  mysql -uroot &lt; C:/xampp/…./xz.sql<br>mysql管理命令<br>  quit;/show databases;/use 数据库名;/show tables;/desc 表名;<br>SQL命令<br>  CREATE DATABASE xz;<br>  USE xz;<br>  CREATE TABLE user(<br>    uid INT,<br>    …<br>  );<br>  INSERT INTO user VALUES(),()…;<br>  SELECT * FROM user;<br>1.MySQL中常用SQL命令<br>  增删改查<br>  (1)更改记录<br>  UPDATE  user  SET<br>   upwd=’654321’, <a href="mailto:email=&#39;wh@tedu.cn" target="_blank" rel="noopener">email=&#39;wh@tedu.cn</a>‘ WHERE uid=’1’;<br>  练习：更改编号为2的数据，电话改为1318888888，性别改为’M’,注册时间改为 ‘2017-3-1’<br> (2)删除记录<br>   DELETE  FROM  user  WHERE  uid=’3’;<br>2.数据库中的中文乱码<br> 计算机中如何存储英文字符<br>ASCII: 总共有128个，对所有的英文字符及符号进行了编码。<br>       hello   72698977<br>  Latin-1: 总共有256个，兼容ASCII，同时对欧洲符号进行了编码<br> 计算机中如何存储中文字符<br>  GB2312: 对6千多常用的汉字进行了编码，兼容ASCII码<br>  GBK: 对2万多汉字进行了编码，兼容GB2312<br>  BIG5: 台湾繁体字编码，不兼容GB2312和GBK；兼容ASCII码<br>  Unicode：对世界上主要的语言的字符进行编码，兼容ASCII码，不兼容GBK，GB2312，BIG5等。具体分为UTF-8，UTF-16，UTF-32三种存储方案。<br> 中文乱码产生的根源<br>  MySQL默认使用Latin-1编码，而这个编码不能存储中文的。<br>解决MySQL存储中文乱码<br> (1)sql脚本文件另存为的编码<br> (2)客户端连接服务器使用的编码#设置客户端连接服务器使用的编码为UTF8<br>SET NAMES UTF8;<br> (3)服务器端数据库存储数据使用的编码<br> 都统一使用UTF8编码。</p>
+<p>#创建数据库xz;声明存储的编码为UTF8<br>CREATE DATABASE xz CHARSET=UTF8;<br>设置editplus的默认编码：<br>  Tools-&gt;preferences-&gt;file-&gt;default encoding</p>
+<p>练习：创建脚本文件01_dangdang.sql；设置连接数据库编码utf8，创建数据库dangdang，进入该数据库，创建数据表book,包含bid编号，title标题，price价格，pubDate出版时间，isJia是否加价购(是-&gt;1，不是-&gt;0)；插入4本书的信息，修改第2条书的信息，删除第3条，查询结果。<br>3.MySQL中列类型<br> 列类型：创建表的时候，指定列可以存储的数据类型<br>  CREATE TABLE book( bid 列类型 );<br>  Creat table book (bid int); int就是列类型<br>  (1)数值类型——可以不加引号<br>1T=1024GB  1GB=1024MB 1MB=1024KB 1KB=1024BT 1BT=8BIT<br>    TINYINT: tinyint微整型，占用1个字节(BT)，-128~127<br>    SMALLINT: 小整型，占用2个字节，-32768~32767<br>    INT: 整型，占用4个字节，-2147483648~2147483647<br>    BIGINT: 大整型，占用8个字节，范围很大<br>    FLOAT: 单精度浮点型，占4个字节，3.4E38，范围比INT大的多，但是精度不如INT，可能产生误差。<br>DOUBLE: 双精度浮点型，占8个字节，1.79E308，范围比BIGINT大的多，但是精度不如BIGINT，可能产生误差。<br> DECIMAL(M,D): 定点小数，不会产生计算误差舍入；M代表总的有效位数(不包含小数点)，D代表小数点后有效位数。decimal<br>    BOOL: 布尔型，取值只能是TRUE/1、FALSE/0，数据库在存储的时候使用TINYINT(1或0); TRUE和FALSE不能加引号。<br> 219.85<br> 25000.32<br>123456.789<em>10^-1<br>12345.6789<br>1234.56789</em>10^1<br>123.456789<em>10^2<br>12.3456789</em>10^3<br>  (2)字符串类型——必须加引号<br>    VARCHAR(M): 变长字符串，不会产生空间浪费，操作速度相对慢，M不能超过65535。<br>    CHAR(M): 定长字符串，可能产生空间浪费，操作速度相对快，M不能超过255。用于储存手机号码，身份证号等固定长度的字符。<br>    TEXT(M): 大型变长字符串，M不超过2G<br>  (3)日期时间类型——必须加引号<br>    DATETIME: 日期时间类型  ‘2018-11-2 15:18:30’<br>    DATE: 日期类型  ‘2018-11-2’<br>    TIME: 时间类型  ‘15:18:30’<br>    CHAR(5)    VARCHAR(5)<br>a    a\0\0\0\0    a\0<br>ab    ab\0\0\0    ab\0<br>abc    abc\0\0    abc\0<br>达内    达内\0\0\0    达内\0<br>  age TINYINT<br>  empCount SMALLINT<br>  commentCount Int<br>  price DECIMAL(6,2)  #9999.99<br>  phone CHAR(11)<br>  blog VARCHAR(8000)<br>  isVip BOOL<br>练习：创建脚本文件02_xuezi.sql；创建数据库xuezi，设置保存的字符编码为utf8；创建保存笔记本信息的表laptop，包含列lid编号，title标题，price价格，stockCount库存量，shelfTime上架时间，isIndex是否显示在首页。插入4条记录<br>练习：创建脚本文件03_tedu.sql；创建数据库tedu，设置存储的编码；创建保存部门信息的表dept，包含(did，dname部门名称，empCount员工数量)，插入3条数据<br>  10  研发部  3<br>  20  市场部  2<br>  30  运营部  1创建保存员工信息的表emp，包含(eid，ename姓名，sex，birthday生日，salary工资，deptId所属部门编号)，插入对应的员工数据。<br>4.列约束<br>  MySQL可以对插入的数据进行特定的检验（验证），只有满足条件的数据才允许插入到数据表中，否则会被认为是非法的插入，(提示“非法插入”，“禁止插入”。)<br>例如：插入人的年龄范围是0~100之间，商品的价格大于0…<br>MySQL提供了六种列约束<br>  (1)主键约束——PRIMARY KEY<br>Primary key<br>   声明了主键约束的列上不能插入重复的值，如果主键的数据是数值会自动按照由小到大的顺序排列——加快查找速度。注意：一个表中最多有一个主键。,一般来说只给编号添加，但是也可以给其他列添加，在一个表中只能有一个主键，不允许出现多个。<br>MySQL中的NULL含义：空的，空缺的；<br>指应该有某个数据，但暂时还不能确定具体的指；<br>例如：还没到发年终奖，未决定员工的部门，未确定部门经理</p>
+<p>课后任务：<br>  (1)复习今天内容，重新编写代码<br>  (2)练习：<br>创建脚本文件xz.sql，创建数据库xz，设置编码UTF8；进入该数据库，<br>创建保存笔记本分类表xz_laptop_family  (  fid，fname分类名称，laptopCount 笔记本数量)<br>  10  联想  2<br>  20  戴尔  2<br>  30  小米   3<br> 创建笔记本数据表 xz_laptop，包含 ( lid，title，price，spec  规格，detail详细介绍，shelfTime上架时间，isOnsale是否在售，familyId所属的分类编号)，插入7条记录。</p>
 
             </div>
             <hr>
@@ -425,7 +422,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/04/课堂笔记mysql-day01/" class="b-link-green">课堂笔记mysql_day01</a>
+                    <a href="/2018/12/04/课堂笔记mysql-day02/" class="b-link-green">课堂笔记mysql_day02</a>
                 </p>
             </div>
         </div>
@@ -445,7 +442,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2018/12/04/课堂笔记mysql-day02/">
                     <div class="card-image">
@@ -459,9 +456,9 @@
                 <div class="card-content article-content">
                     <div class="summary">复习网状数据库，层次型数据库，关系型数据库，非关系数据库MySQLserver-&gt;database-&gt;table-&gt;row-&gt;column 连接  mysql.exe -h127.0.0.1 -P3306 -uroo</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -470,6 +467,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -478,17 +476,17 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/04/课堂笔记day01/">
+                <a href="/2018/12/04/课堂笔记mysql-day01/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="课堂笔记day01">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="课堂笔记mysql_day01">
                         
-                        <span class="card-title">课堂笔记day01</span>
+                        <span class="card-title">课堂笔记mysql_day01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1.课程体系： (1)项目导入/数据库/JS基础/服务器端动态语言(服务器端开发) (2)HTML基础/AJAX/CSS/bootstrap(前端核心技术) (3)JS高级/DOM&amp;BOM/JQUERY/VueJS(前端进阶技术) </div>
+                    <div class="summary">复习软件开发流程  软件定义期    可行性研究阶段    需求分析阶段  软件开发期    概要设计阶段    详细设计阶段    编码实现阶段    测试阶段  软件维护期    项目部署阶段    项目维护阶段    服务器:  提供</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-04
