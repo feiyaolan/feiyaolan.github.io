@@ -5,8 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="课堂笔记mysql_day02, web前端,blog搭建,基础">
-    <meta name="description" content="复习网状数据库，层次型数据库，关系型数据库，非关系数据库MySQLserver-&amp;gt;database-&amp;gt;table-&amp;gt;row-&amp;gt;column 连接  mysql.exe -h127.0.0.1 -P3306 -uroo">
+    <meta name="keywords" content="课堂笔记mysql_day03, web前端,blog搭建,基础">
+    <meta name="description" content="复习更改记录UPDATE emp SET salary=5000,sex=0 WHERE eid=5;删除记录DELETE FROM emp WHERE eid=6;中文乱码 Latin-1 Unicode，utf8 sql脚本文件，客户端">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>课堂笔记mysql_day02 | 我的博客</title>
+    <title>课堂笔记mysql_day03 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -245,13 +245,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        课堂笔记mysql_day02
+                        课堂笔记mysql_day03
                     </div>
                 </div>
             </div>
@@ -273,17 +273,19 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-04
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-05
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>复习<br>网状数据库，层次型数据库，关系型数据库，非关系数据库<br>MySQL<br>server-&gt;database-&gt;table-&gt;row-&gt;column<br> 连接<br>  mysql.exe -h127.0.0.1 -P3306 -uroot -p<br>  mysql -uroot<br> 脚本模式<br>  mysql -uroot &lt; C:/xampp/…./xz.sql<br>mysql管理命令<br>  quit;/show databases;/use 数据库名;/show tables;/desc 表名;<br>SQL命令<br>  CREATE DATABASE xz;<br>  USE xz;<br>  CREATE TABLE user(<br>    uid INT,<br>    …<br>  );<br>  INSERT INTO user VALUES(),()…;<br>  SELECT * FROM user;<br>1.MySQL中常用SQL命令<br>  增删改查<br>  (1)更改记录<br>  UPDATE  user  SET<br>   upwd=’654321’, <a href="mailto:email=&#39;wh@tedu.cn" target="_blank" rel="noopener">email=&#39;wh@tedu.cn</a>‘ WHERE uid=’1’;<br>  练习：更改编号为2的数据，电话改为1318888888，性别改为’M’,注册时间改为 ‘2017-3-1’<br> (2)删除记录<br>   DELETE  FROM  user  WHERE  uid=’3’;<br>2.数据库中的中文乱码<br> 计算机中如何存储英文字符<br>ASCII: 总共有128个，对所有的英文字符及符号进行了编码。<br>       hello   72698977<br>  Latin-1: 总共有256个，兼容ASCII，同时对欧洲符号进行了编码<br> 计算机中如何存储中文字符<br>  GB2312: 对6千多常用的汉字进行了编码，兼容ASCII码<br>  GBK: 对2万多汉字进行了编码，兼容GB2312<br>  BIG5: 台湾繁体字编码，不兼容GB2312和GBK；兼容ASCII码<br>  Unicode：对世界上主要的语言的字符进行编码，兼容ASCII码，不兼容GBK，GB2312，BIG5等。具体分为UTF-8，UTF-16，UTF-32三种存储方案。<br> 中文乱码产生的根源<br>  MySQL默认使用Latin-1编码，而这个编码不能存储中文的。<br>解决MySQL存储中文乱码<br> (1)sql脚本文件另存为的编码<br> (2)客户端连接服务器使用的编码#设置客户端连接服务器使用的编码为UTF8<br>SET NAMES UTF8;<br> (3)服务器端数据库存储数据使用的编码<br> 都统一使用UTF8编码。</p>
-<p>#创建数据库xz;声明存储的编码为UTF8<br>CREATE DATABASE xz CHARSET=UTF8;<br>设置editplus的默认编码：<br>  Tools-&gt;preferences-&gt;file-&gt;default encoding</p>
-<p>练习：创建脚本文件01_dangdang.sql；设置连接数据库编码utf8，创建数据库dangdang，进入该数据库，创建数据表book,包含bid编号，title标题，price价格，pubDate出版时间，isJia是否加价购(是-&gt;1，不是-&gt;0)；插入4本书的信息，修改第2条书的信息，删除第3条，查询结果。<br>3.MySQL中列类型<br> 列类型：创建表的时候，指定列可以存储的数据类型<br>  CREATE TABLE book( bid 列类型 );<br>  Creat table book (bid int); int就是列类型<br>  (1)数值类型——可以不加引号<br>1T=1024GB  1GB=1024MB 1MB=1024KB 1KB=1024BT 1BT=8BIT<br>    TINYINT: tinyint微整型，占用1个字节(BT)，-128~127<br>    SMALLINT: 小整型，占用2个字节，-32768~32767<br>    INT: 整型，占用4个字节，-2147483648~2147483647<br>    BIGINT: 大整型，占用8个字节，范围很大<br>    FLOAT: 单精度浮点型，占4个字节，3.4E38，范围比INT大的多，但是精度不如INT，可能产生误差。<br>DOUBLE: 双精度浮点型，占8个字节，1.79E308，范围比BIGINT大的多，但是精度不如BIGINT，可能产生误差。<br> DECIMAL(M,D): 定点小数，不会产生计算误差舍入；M代表总的有效位数(不包含小数点)，D代表小数点后有效位数。decimal<br>    BOOL: 布尔型，取值只能是TRUE/1、FALSE/0，数据库在存储的时候使用TINYINT(1或0); TRUE和FALSE不能加引号。<br> 219.85<br> 25000.32<br>123456.789<em>10^-1<br>12345.6789<br>1234.56789</em>10^1<br>123.456789<em>10^2<br>12.3456789</em>10^3<br>  (2)字符串类型——必须加引号<br>    VARCHAR(M): 变长字符串，不会产生空间浪费，操作速度相对慢，M不能超过65535。<br>    CHAR(M): 定长字符串，可能产生空间浪费，操作速度相对快，M不能超过255。用于储存手机号码，身份证号等固定长度的字符。<br>    TEXT(M): 大型变长字符串，M不超过2G<br>  (3)日期时间类型——必须加引号<br>    DATETIME: 日期时间类型  ‘2018-11-2 15:18:30’<br>    DATE: 日期类型  ‘2018-11-2’<br>    TIME: 时间类型  ‘15:18:30’<br>    CHAR(5)    VARCHAR(5)<br>a    a\0\0\0\0    a\0<br>ab    ab\0\0\0    ab\0<br>abc    abc\0\0    abc\0<br>达内    达内\0\0\0    达内\0<br>  age TINYINT<br>  empCount SMALLINT<br>  commentCount Int<br>  price DECIMAL(6,2)  #9999.99<br>  phone CHAR(11)<br>  blog VARCHAR(8000)<br>  isVip BOOL<br>练习：创建脚本文件02_xuezi.sql；创建数据库xuezi，设置保存的字符编码为utf8；创建保存笔记本信息的表laptop，包含列lid编号，title标题，price价格，stockCount库存量，shelfTime上架时间，isIndex是否显示在首页。插入4条记录<br>练习：创建脚本文件03_tedu.sql；创建数据库tedu，设置存储的编码；创建保存部门信息的表dept，包含(did，dname部门名称，empCount员工数量)，插入3条数据<br>  10  研发部  3<br>  20  市场部  2<br>  30  运营部  1创建保存员工信息的表emp，包含(eid，ename姓名，sex，birthday生日，salary工资，deptId所属部门编号)，插入对应的员工数据。<br>4.列约束<br>  MySQL可以对插入的数据进行特定的检验（验证），只有满足条件的数据才允许插入到数据表中，否则会被认为是非法的插入，(提示“非法插入”，“禁止插入”。)<br>例如：插入人的年龄范围是0~100之间，商品的价格大于0…<br>MySQL提供了六种列约束<br>  (1)主键约束——PRIMARY KEY<br>Primary key<br>   声明了主键约束的列上不能插入重复的值，如果主键的数据是数值会自动按照由小到大的顺序排列——加快查找速度。注意：一个表中最多有一个主键。,一般来说只给编号添加，但是也可以给其他列添加，在一个表中只能有一个主键，不允许出现多个。<br>MySQL中的NULL含义：空的，空缺的；<br>指应该有某个数据，但暂时还不能确定具体的指；<br>例如：还没到发年终奖，未决定员工的部门，未确定部门经理</p>
-<p>课后任务：<br>  (1)复习今天内容，重新编写代码<br>  (2)练习：<br>创建脚本文件xz.sql，创建数据库xz，设置编码UTF8；进入该数据库，<br>创建保存笔记本分类表xz_laptop_family  (  fid，fname分类名称，laptopCount 笔记本数量)<br>  10  联想  2<br>  20  戴尔  2<br>  30  小米   3<br> 创建笔记本数据表 xz_laptop，包含 ( lid，title，price，spec  规格，detail详细介绍，shelfTime上架时间，isOnsale是否在售，familyId所属的分类编号)，插入7条记录。</p>
+                <p>复习<br>更改记录<br>UPDATE emp SET salary=5000,sex=0 WHERE eid=5;<br>删除记录<br>DELETE FROM emp WHERE eid=6;<br>中文乱码<br> Latin-1<br> Unicode，utf8<br> sql脚本文件，客户端设置连接使用的编码，服务器存储数据使用的编码<br> 列类型<br>  数值型<br>    TINYINT(-128~127) SMALLINT(-32768~32767) INT(-2147483648~2147483647) BIGINT FLOAT DOUBLE DECIMAL(6,2) 9998.99 BOOL<br>  字符串型<br>    VARCHAR(M)    65535<br>    CHAR(M)  255<br>    TEXT<br>  日期时间型<br>    DATE  TIME  DATETIME<br>列约束<br>  主键约束 PRIMARY KEY，里面不建议插入null<br>今日目标<br> 列约束<br> 简单查询<br>1.列约束<br> (1)主键约束——PRIMARY KEY     primary key<br> (2)唯一约束——UNIQUE       unique<br>  声明了唯一约束的列上不能插入重复的值，但可以插入NULL，而且可以插入多个NULL<br> (3)非空约束——NOT  NULL<br>  声明非空约束的列上不能插入NULL值，如果插入的是NULL也不会报错，会显示空内容。<br> (4)默认值约束——DEFAULT  Default<br>  可以使用DEFAULT关键字为列声明默认值；有以下两种用法：<br>  INSERT INTO xz_laptop VALUES(1,’小米air’, DEFAULT…);<br>  INSERT INTO xz_laptop(lid,title) VALUES(2,’苹果pro’);<br> (5)检查约束check<br>  检查约束可以对插入的数据范围进行验证<br>  CREATE TABLE student(<br>   age TINYINT CHECK(age&gt;=18 AND age&lt;=60)<br>  );<br>  MySQL不支持，会降低插入和更新等操作效率。<br> (6)外键约束——FOREIGN KEY<br>  声明了外键约束的列，取值必须在另一个表的主键上出现过<br> 取值可以是NULL;<br>  注意：外键的列类型要和另外一个表主键的列类型一致。<br>FOREIGN(foreign) KEY(familyId) REFERENCES(引用references) xz_laptop_family(fid)</p>
+<p>所有的列约束中，主键约束推荐使用——可以提高查询的效率；其它的列约束是否使用根据项目而定，可以不用——会影响数据的插入和更新效率。没有特殊条件不建议用FOREIGN(foreign) KEY<br>2.MySQL中的自增列<br> AUTO_INCREMENT: （auto_increment）自动增加，加入一个列声明了自增列，无需手动赋值，直接指定为NULL，会自动获取当前的最大值，新纪录会执行+1然后插入。<br> 注意：<br>    允许手动赋值<br>    只用于整数型的主键列上<br>练习：使用列约束；<br>创建脚本文件02_tedu.sql；创建数据库tedu<br>  创建部门表 dept，包含did，dname部门名称；<br>    10 研发部  20 市场部  30 运营部  40 测试部<br>  创建员工表 emp，包含eid，ename，sex，birthday生日，salary工资，deptId隶属的部门编号<br> 插入14条记录，分属于10/20/30部门，其中最后一个员工不属于任何一个部门。<br>3.项目中如何存储日期时间数据<br>  2018-11-25<br>  2018年11月25日<br>  11-25-2018<br>  25/11/2018<br> 存储的是距离计算机元年的毫秒数，使用BIGINT类型。<br>  计算机元年 1970-1-1  0:0:0<br>  1秒钟=1000毫秒<br> 数据库存储1000    1970-1-1  0:0:1<br> 1000<em>60            1970-1-1  0:1:0<br> 1000</em>60<em>60        1970-1-1  1:0:0<br> 2018年距离计算机元年的毫秒：48</em>365<em>24</em>60<em>60</em>1000<br> 男   女<br> 男孩  女孩<br> 男人  女人<br> man  woman<br> girl   boy<br> male  female<br> 1    0<br>4.简单查询<br> (1)查询所有的列<br>  SELECT <em> FROM emp;
+  </em>代表所有的列<br> (2)查询特定的列<br>  示例：查询所有员工的姓名，生日，工资。<br>  SELECT ename,birthday,salary FROM emp;<br>  练习：查询所有员工的编号，姓名，性别，工资<br>  SELECT eid,ename,sex,salary FROM emp;<br> (3)给列取别名<br>  示例：查询所有员工的姓名和工资，列名使用汉字。<br>  SELECT ename AS 姓名,salary AS 工资 FROM emp;<br>  练习：查询所有员工的编号，姓名，性别，生日；全部使用中文别名。<br>  SELECT eid AS 编号,ename AS 姓名,sex AS 性别,birthday AS 生日 FROM emp;<br>  练习：查询所有员工的编号，姓名，性别，生日；全部使用1个英文字母作为别名。<br>  SELECT eid a,ename b,sex c,birthday d FROM emp;<br>AS关键字可以省略<br> (4)只显示不同的值、记录/合并相同的项、记录DISTINCT<br>  练习：查询公司都有哪些性别的员工<br>  SELECT DISTINCT sex FROM emp;<br>  练习：查询公司员工都分布在哪些部门<br>  SELECT DISTINCT deptId FROM emp;<br> (5)查询时执行运算<br>  示例：计算5+3-7/2<em>9<br>   SELECT 5+3-7/2</em>9;<br>  练习：查询所有员工的姓名及其年薪，并且起别名。<br>   SELECT ename AS 姓名,salary<em>12 AS 年薪 FROM emp;<br>  练习：假设所有员工工资加500，年终奖是5000，查询出姓名和年薪，并且起别名。<br>  SELECT ename AS 姓名,(salary+500)</em>12+5000 AS 年薪 FROM emp;<br> (6)查询的结果排序<br>SELECT <em> FROM …order by … asc升序排列 （ascendant）<br>SELECT </em> FROM …order by …desc降序排列 （descendant）<br>  示例：查询所有员工的信息，结果按照工资由低到高排序<br>   SELECT <em> FROM emp ORDER BY salary ASC;<br>  示例：查询所有员工的信息，结果按照工资由高到低排序<br>   SELECT </em> FROM emp ORDER BY salary DESC;<br>  练习：查询所有员工的信息，结果按照年龄由大到小。<br>  SELECT <em> FROM emp ORDER BY birthday ASC;<br>  练习：查询所有员工的信息，结果按照姓名升序排序。<br>  SELECT </em> FROM emp ORDER BY ename ASC;<br>  练习：查询所有员工的信息，按生日由大到小，若生日相同，再按照姓名升序排列。<br>  SELECT <em> FROM emp ORDER BY birthday DESC,ename ASC;<br>  练习：查询所有员工信息，按照工资由大到小排序，要求女员工必须排在男员工的前边。<br>  SELECT </em> FROM emp ORDER BY sex,salary DESC;<br>asc -&gt; ascend    升序<br>desc -&gt; descend 降序<br>如果不加排序规则，默认是按照升序排列（asc）。<br>ORDER BY可以按照数值、日期、字符串(字符的编码)来排序<br> (7)条件查询<br>  示例：查询编号为5的员工工资<br>  SELECT <em> FROM emp WHERE eid=5;<br>SQL语句中支持的比较运算符：<br>=        !=    &gt;      &lt;     &gt;=       &lt;=<br>等于  不等于  大于   小于  大于等于  小于等于<br>  练习：查询出工资大于等于6000的员工所有信息。<br>  SELECT </em> FROM emp WHERE salary&gt;=6000;<br>  练习：查询出所有女员工的信息；<br>  SELECT <em> FROM emp WHERE sex=0;<br>  练习：查询出员工姓名为king的所有信息<br>  SELECT </em> FROM emp WHERE ename=’king’;<br>  练习：查询出不在10号部门的员工的信息。<br>  SELECT <em> FROM emp WHERE deptId!=10;<br>  练习：查询出1990年之前出生的员工信息<br>  SELECT </em> FROM emp WHERE birthday&lt;’1990-1-1’;<br>  练习：查询出1993年之后出生的员工信息<br>  SELECT * FROM emp WHERE birthday&gt;’1993-12-31’;<br>  练习：查询出没有明确部门的员工信息</p>
+<p>  #SELECT <em> FROM emp WHERE deptId=NULL; 错误<br>  SELECT </em> FROM emp WHERE deptId IS NULL;<br>注意: NULL不能和任何值进行等于/不等于判定，包括NULL自己。可以使用 IS NULL  和  IS NOT NULL<br>  练习：查询所有有明确部门的员工信息<br>  SELECT <em> FROM emp WHERE deptId IS NOT NULL;<br>  练习：查询出10号部门所有女员工的信息<br>  SELECT </em> FROM emp WHERE deptId=10 AND sex=0;<br>AND(并且),都要满足    OR(或者)只需要满足一个<br>  练习：查询出10号和30号部门所有员工信息<br>  SELECT <em> FROM emp WHERE deptId=10 OR deptId=30;<br>  练习：查询出工资在6000~8000所有员工信息<br>  SELECT </em> FROM emp WHERE salary&gt;=6000 AND salary&lt;=8000;<br>  SELECT <em> FROM emp WHERE salary BETWEEN 6000 AND 8000;<br>between … and …  &gt;= 第1个值     &lt;= 第2个值<br>not between … and …<br>  练习：查询出不在6000~8000所有员工信息。<br>  SELECT </em> FROM emp WHERE salary<6000 or="" salary="">8000;<br>  SELECT <em> FROM emp WHERE salary NOT BETWEEN 6000 AND 8000;<br>  练习：查询出1990年出生的员工信息。<br>  SELECT </em> FROM emp WHERE birthday&gt;=’1990-1-1’ AND birthday&lt;=’1990-12-31’;<br>  SELECT <em> FROM emp WHERE birthday BETWEEN ‘1990-1-1’ AND ‘1990-12-31’;<br>  练习：查询10号和20号和30号部门的员工信息。<br>  SELECT </em> FROM emp WHERE deptId=10 OR deptId=20 OR deptId=30;<br>  SELECT <em> FROM emp WHERE deptId IN(10,20,30);<br>  练习：查询出不在10号和20号部门的员工信息<br>  SELECT </em> FROM emp WHERE deptId NOT IN(10,20);<br> (8)模糊条件查询<br>  示例：查询出姓名中含有字母e的员工信息<br>  SELECT <em> FROM emp WHERE ename LIKE ‘%e%’;<br>  练习：查询出姓名以e结尾的员工信息<br>  SELECT </em> FROM emp WHERE ename LIKE ‘%e’;<br>  练习：查询出姓名中倒数第2个字符为e的员工信息<br>  SELECT <em> FROM emp WHERE ename LIKE ‘%e_’;<br>%  任意多个字符   &gt;=0<br>_   任意一个字符   =1<br>上述两个符号不能和=连用，必须使用LIKE<br> (9)分页查询<br>  分页显示：假如查询的结果集中有太多的记录，一次显示不完，可以分多页显示。<br> 页码    开始    结束<br>第1页    0    4<br>第2页    5    9<br>第3页    10    14<br>第4页    15    19<br>开始 = (页码-1)</em>每页数量<br>   SELECT <em> FROM emp LIMIT start,count;<br>   start  开始的值<br>   count 查询的数量<br> 示例：每页大小是5，查询第1页的数据<br> SELECT </em> FROM emp LIMIT 0,5;<br> 练习：每页大小是5，查询第2页的数据<br> SELECT <em> FROM emp LIMIT 5,5;<br> 练习：每页大小是5，查询第3页的数据<br> SELECT </em> FROM emp LIMIT 10,5;<br> 练习：每页大小是5，查询第4页的数据<br> SELECT * FROM emp LIMIT 15,5;</6000></p>
+<p> 注意：LIMIT 后边的两个数值不能添加引号。</p>
+<p> 综合：<br>   SELECT * FROM emp<br>      WHERE …<br>      ORDER BY…<br>      LIMIT…<br> 练习：查询出所有的男员工工资最高的前三个人。<br>课后任务：<br>(1)    复习今天内容，删除所有的代码，保留注释，重新编写SQL语句。<br>(2)    查询出工资为8000以上的女员工的姓名，性别，生日，结果集是按照工资降序排序，只取前三个人。<br>(3)    select ename,sex,birthday from emp where sex=0 and salary&gt;=8000 order by salary desc limit 0,3;<br>(4)    查看 “学子商城”表结构图</p>
 
             </div>
             <hr>
@@ -422,7 +424,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/04/课堂笔记mysql-day02/" class="b-link-green">课堂笔记mysql_day02</a>
+                    <a href="/2018/12/05/课堂笔记mysql-day03/" class="b-link-green">课堂笔记mysql_day03</a>
                 </p>
             </div>
         </div>
@@ -442,7 +444,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2018/12/05/课堂笔记mysql-day03/">
                     <div class="card-image">
@@ -456,9 +458,9 @@
                 <div class="card-content article-content">
                     <div class="summary">复习更改记录UPDATE emp SET salary=5000,sex=0 WHERE eid=5;删除记录DELETE FROM emp WHERE eid=6;中文乱码 Latin-1 Unicode，utf8 sql脚本文件，客户端</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -467,6 +469,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -475,17 +478,17 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/04/课堂笔记mysql-day01/">
+                <a href="/2018/12/04/课堂笔记mysql-day02/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="课堂笔记mysql_day01">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="课堂笔记mysql_day02">
                         
-                        <span class="card-title">课堂笔记mysql_day01</span>
+                        <span class="card-title">课堂笔记mysql_day02</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习软件开发流程  软件定义期    可行性研究阶段    需求分析阶段  软件开发期    概要设计阶段    详细设计阶段    编码实现阶段    测试阶段  软件维护期    项目部署阶段    项目维护阶段    服务器:  提供</div>
+                    <div class="summary">复习网状数据库，层次型数据库，关系型数据库，非关系数据库MySQLserver-&gt;database-&gt;table-&gt;row-&gt;column 连接  mysql.exe -h127.0.0.1 -P3306 -uroo</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-04
