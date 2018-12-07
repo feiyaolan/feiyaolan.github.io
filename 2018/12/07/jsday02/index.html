@@ -5,8 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="jsday01, web前端,blog搭建,基础">
-    <meta name="description" content="复习标准SQL语句分类(1)DDL: Data Define Language 定义数据 CREATE/DROP/ALTER(修改)(2)DML: Data Manipulate Language 操作数据 INSERT/DELETE/UP">
+    <meta name="keywords" content="jsday02, web前端,blog搭建,基础">
+    <meta name="description" content="jsday02 | 我的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>jsday01 | 我的博客</title>
+    <title>jsday02 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -245,13 +245,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        jsday01
+                        jsday02
                     </div>
                 </div>
             </div>
@@ -280,14 +280,7 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>复习<br>标准SQL语句分类<br>(1)DDL: Data Define Language 定义数据<br> CREATE/DROP/ALTER(修改)<br>(2)DML: Data Manipulate Language 操作数据<br> INSERT/DELETE/UPDATE<br>(3)DQL: Date Query Language 查询数据<br> SELECT<br>(4)DCL: Date Control Language 控制用户权限<br> GRANT(授权)/REVOKE(收权)<br>CREATE TABLE emp(<br>   eid INT PRIMARY KEY AUTO_INCREMENT<br>);<br>INSERT INTO emp VALUES(NULL….)<br>练习：<br>  查询出所有男员工工资最高的前3个人。<br>  SELECT <em> FROM emp WHERE sex=1 ORDER BY salary DESC LIMIT 0,3;<br>1.复杂查询<br> (1)聚合查询/分组查询<br>  示例：查询出所有员工的数量<br>  SELECT COUNT(eid) FROM emp;<br>  SELECT COUNT(</em>) FROM emp;  #推荐写法<br>  练习：使用员工的姓名这一列查询员工数量<br>  SELECT COUNT(ename) FROM emp;<br>  练习：使用员工的部门编号这一列查询员工数量<br>  SELECT COUNT(deptId) FROM emp;<br>  练习：查询所有男员工的数量<br>  SELECT COUNT(<em>) FROM emp WHERE sex=1;<br>聚合函数<br>函数就是一个功能体，提供数据，产出结果。——饺子机<br>COUNT(…)/SUM(…)/AVG(…)/MAX(…)/MIN(…)<br> 练习：查询出所有员工的工资总和是多少<br> SELECT SUM(salary) FROM emp;<br> 练习：查询出所有员工的平均工资是多少<br> SELECT SUM(salary)/COUNT(</em>) FROM emp;<br> SELECT AVG(salary) FROM emp;<br> 练习：查询出工资最高的员工工资是多少<br> SELECT MAX(salary) FROM emp;<br> 练习：查询出工资最低的员工工资是多少<br> SELECT MIN(salary) FROM emp;<br> 练习：查询出年龄最大的员工<br> SELECT MIN(birthday) FROM emp;<br> 分组查询: 只能查询分组的条件和聚合函数。<br> 示例：查询出每个部门的员工数量是多少。<br> SELECT deptId,COUNT(<em>) FROM emp GROUP BY deptId;<br> 练习：查询出男女的员工的平均工资，最高工资，最低工资是多少<br> SELECT sex,AVG(salary),MAX(salary),MIN(salary) FROM emp GROUP BY sex;<br> 函数补充：<br>YEAR(…)  获取日期中的年份<br>MONTH(…)  获取日期中的月份<br>DAY(…)  获取日期中的日<br>  示例：查询出1991年出生员工的所有信息<br>  SELECT </em> FROM emp WHERE YEAR(birthday)=1991;<br>  练习：查询出3月份出生的员工所有信息<br>  SELECT <em> FROM emp WHERE MONTH(birthday)=3;<br>  练习：查询出5号出生的员工所有信息<br>  SELECT </em> FROM emp WHERE DAY(birthday)=5;<br> (2)子查询<br>  把一个SQL语句的查询结果作为另外一个SQL语句的查询条件<br>  示例：查询出研发部所有的员工信息<br>   步骤1：查询出研发部的部门编号——10<br>   SELECT did FROM dept WHERE dname=’研发部’;<br>   步骤2：根据研发部的部门编号10查询员工信息<br>   SELECT <em> FROM emp WHERE deptId=10;<br>   综合：<br>   SELECT </em> FROM emp WHERE deptId=(<br>     SELECT did FROM dept WHERE dname=’研发部’<br>   );<br>  练习：查询出比tom工资高的员工的所有信息<br>   步骤1：查询出tom的工资——6000<br>   SELECT salary FROM emp WHERE ename=’tom’;<br>   步骤2：查询出工资比6000高的员工所有信息<br>   SELECT <em> FROM emp WHERE salary&gt;6000;<br>   综合：<br>   SELECT </em> FROM emp WHERE salary&gt;(<br>     SELECT salary FROM emp WHERE ename=’tom’<br>   );<br>  练习：查询出和tom同一年出生的员工信息<br>   步骤1：查询出tom的出生的年份是多少——1990<br>   SELECT YEAR(birthday) FROM emp<br>     WHERE ename=’tom’;<br>   步骤2：查询出出生年份为1990年的员工信息<br>   SELECT <em> FROM emp WHERE YEAR(birthday)=1990;<br>   综合：<br>   SELECT </em> FROM emp WHERE YEAR(birthday)=(<br>     SELECT YEAR(birthday) FROM emp<br>     WHERE ename=’tom’<br>   );<br> (3)多表查询<br>  示例：查询出所有员工的姓名及其部门名称。<br>  SELECT ename,dname FROM emp,dept;<br>  错误：产生笛卡尔积！<br>  多表查询如何避免产生笛卡尔积，添加查询条件<br>  SELECT ename,dname FROM emp,dept WHERE deptId=did;<br> 上述多表查询语法是SQL-92中，无法查询出没有部门的员工，也无法查询出没有员工的部门。<br> SQL-99中提出了新的多表查询方法。<br> (1)内连接 INNER JOIN…ON… 和SQL92结果一致<br>  SELECT ename,dname FROM emp INNER JOIN dept ON deptId=did;<br> (2)左外连接 LEFT OUTER JOIN…ON…<br>  SELECT ename,dname FROM emp LEFT OUTER JOIN dept ON deptId=did;<br>  查询结果是左侧表中所有的记录都显示，即使右侧没有对应的记录； OUTER可以省略<br> (3)右外连接 RIGHT OUTER JOIN…ON…<br>  SELECT ename,dname FROM emp RIGHT OUTER JOIN dept ON deptId=did;<br>  查询结果是右侧所有记录都显示；即使左侧没有对应的记录；OUTER可以省略<br> (4)全连接 FULL JOIN<br>  显示左侧和右侧所有记录——MySQL不支持<br>  UNION  合并相同的项；<br>  UNION ALL 不合并相同的项；<br>  (SELECT ename FROM emp_us)<br>  UNION<br>  (SELECT ename FROM emp_cn);</p>
-<p>  (SELECT ename,dname FROM emp LEFT OUTER JOIN dept ON deptId=did) UNION (SELECT ename,dname FROM emp RIGHT OUTER JOIN dept ON deptId=did);</p>
-<p>2.学习一门编程语言的基本步骤<br>(1)了解背景知识：历史、现状、特点、应用场景。<br>(2)搭建开发环境，编写hello world<br>(3)变量和常量<br>(4)数据类型<br>(5)运算符<br>(6)逻辑结构<br>(7)通用小程序<br>(8)函数和对象<br>(9)第三方库、框架<br>(10)实用的项目</p>
-<p>有基础的学员<br>程序员必做50题<br><a href="https://wenku.baidu.com/view/af66e2f14afe04a1b071de42.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/af66e2f14afe04a1b071de42.html</a></p>
-<p>3.JS概述<br>  (1)历史<br>    1995年，JS最早出现在Netscape的浏览器中<br>    2009nian ,JS遵循CommonJS规范，开始向服务器端发展。<br>  (2)现状<br>    既可以运行在客户端浏览器，也可以运行在服务器端。<br>  (3)特点<br>    解释型语言，编译一行执行一行。<br>    弱类型语言<br>    基于对象<br>跨平台<br>(4)应用领域<br>网页中的交互效果<br>移动app<br>Web服务器<br>3.JS的执行环境<br>  (1)浏览器自带的JS解释器<br>  (2)NODEJS下的JS解释器<br>   <a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a>   nodejs下载地址<br>   在命令行下   node -v   查看系统中nodejs版本号<br>  (3)执行JS代码<br>   浏览器：<br>    创建01.js和01.html   在01.js输入console.log(‘hello word’);<br>    在01.html中引入01.js<br>    &lt;script src=”01.js”<br>双击打开html文件，——&gt;f12console<br>   NODEJS下：<br>     node  C:/xampp/…./01.js<br>4.JS代码规范<br> (1)区分大小写<br> (2)每行代码结束的分号可加可不加，提倡都加<br> (3)分为单行注释(//…)和多行注释(/<em>…</em>/)<br>5.变量<br> 变量就是用于存放数据的容器。, 主板—&gt;内存条（插在凹槽里）数据就是储存在内存条里。<br> x=1  y=2<br> (1)声明变量<br>   var a=1;<br>   练习：声明多个变量，分别保存员工的编号，姓名，性别，生日，工资，部门。<br> (2)变量的命名规则<br>   变量名称是以字母、数字、美元符号($)、下划线组成的；不能以数字开头。<br>   多个连词之间的命名方法(下划线命名法、驼峰命名法)<br>     user_name  userName<br>   不能使用关键字和保留字作为变量名</p>
-<p> (3)变量的注意<br>   var a;<br>   变量声明后未赋值，此时的值是undefined（未定义）<br>   使用未声明的变量会报错</p>
-<p> (4)一次性声明多个变量<br>   var a=1,b=2,c;<br>   多个变量之间用逗号隔开。<br>3.常量constconstant<br> 一旦声明不能重新赋值。<br> 例如：春节的日期、中秋节的日期、圆周率…<br> 关键字： const PI=3.14;<br>4.数据类型<br>  分为原始类型和引用类型<br>  原始类型分为数值型、字符串型、布尔型、未定义型(undefined)、空(null)<br> (1)数值型<br>  分为整型和浮点型<br>  整型在内存中占4个字节，浮点型占8个字节<br>  8进制，以0开头，例如012 -&gt; 10<br>  16进制，以0X开头，例如0XF -&gt; 15<br>      a~f 代表 10~15     不区分大小写<br>  0XFF  -&gt;  255<br>课后任务：<br>  (1)复习今天的内容，删除注释重新编写代码<br>  (2)练习： ①使用变量保存圆的半径为5，常量保存圆周率为3.14，分别计算30度/60度的周长。<br>使用变量保存商品1的单价12.5和数量7，商品2的单价18，数量3.5，计算商品的总价。<br>  (3)预习JS的数据类型</p>
-
+                
             </div>
             <hr>
 
@@ -425,7 +418,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/07/jsday01/" class="b-link-green">jsday01</a>
+                    <a href="/2018/12/07/jsday02/" class="b-link-green">jsday02</a>
                 </p>
             </div>
         </div>
@@ -445,7 +438,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2018/12/07/jsday02/">
                     <div class="card-image">
@@ -459,9 +452,9 @@
                 <div class="card-content article-content">
                     <div class="summary"></div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -470,6 +463,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -478,20 +472,20 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/05/课堂笔记mysql-day03/">
+                <a href="/2018/12/07/jsday01/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="课堂笔记mysql_day03">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="jsday01">
                         
-                        <span class="card-title">课堂笔记mysql_day03</span>
+                        <span class="card-title">jsday01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习更改记录UPDATE emp SET salary=5000,sex=0 WHERE eid=5;删除记录DELETE FROM emp WHERE eid=6;中文乱码 Latin-1 Unicode，utf8 sql脚本文件，客户端</div>
+                    <div class="summary">复习标准SQL语句分类(1)DDL: Data Define Language 定义数据 CREATE/DROP/ALTER(修改)(2)DML: Data Manipulate Language 操作数据 INSERT/DELETE/UP</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-05
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-07
                             </span>
                         <span class="publish-author">
                             
