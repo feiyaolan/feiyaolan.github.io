@@ -6,7 +6,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="jsday02, web前端,blog搭建,基础">
-    <meta name="description" content="jsday02 | 我的博客">
+    <meta name="description" content="复习 开发环境  浏览器  js  服务器  nodejs变量声明  var $_c1=3;  字母，数字，美元符号，下划线  var a;  undefined  a=1;  var a,b=2,c=5;常量声明  const PI=3.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -280,7 +280,35 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>复习<br> 开发环境<br>  浏览器  js<br>  服务器  nodejs<br>变量声明<br>  var $_c1=3;<br>  字母，数字，美元符号，下划线<br>  var a;  undefined<br>  a=1;<br>  var a,b=2,c=5;<br>常量声明<br>  const PI=3.14;<br>数据类型<br>  原始类型 和 引用类型<br>  数值型、字符串型、布尔型、未定义型、空null</p>
+<p>学习一门编程语言的基本步骤<br>(1)了解背景知识：历史、现状、特点、应用场景。<br>(2)搭建开发环境，编写hello world<br>(3)变量和常量<br>(4)数据类型<br>(5)运算符<br>(6)逻辑结构<br>(7)通用小程序<br>(8)函数和对象<br>(9)第三方库、框架<br>(10)实用的项目</p>
+<p>1.数据类型<br> (1)数值型<br>   分为整型和浮点型<br>   8进制(012以0开头) 16进制(以0X开头)    10进制<br>   1234.56  -&gt;  1.23456*10^3 -&gt; 1.23456E3</p>
+<p>   typeof(数据)  检测数据类型<br> (2)字符串型<br>   数据被引号包含就是字符串类型；不区分单双引号。<br>   查看一个字符的Unicode编码<br>     ‘a’.charCodeAt()  //97<br> (3)布尔型<br>   在程序中表示真或者假的结果<br>   true/false<br>   常用于一些是否的结果，是否登录，是否注册，是否是会员，是否在售<br>   isLogin=true;  isOnsale=false;<br> (4)未定义型<br>   声明了变量未赋值，结果就是undefined<br> (5)空<br>   用于释放(销毁)一个引用类型的地址，只有一个值null<br>2.数据类型转换<br> (1)隐式转换<br>  ①数字+字符串：  数字被转成字符串<br>    1+’a’  //‘1a’<br>  ②数字+布尔型：  布尔型被转成数字 true-&gt;1  false-&gt;0<br>    1+true  //2<br>    1+false  //1<br>  ③布尔型+字符串：  布尔型转成了字符串<br>    true+’hello’  //‘truehello’<br>  JS中加号(+)的作用<br>    执行加法运算<br>    执行字符串的拼接<br>  使用 - * /执行运算<br>    尝试将运算符的两端转成数值型，如果含有非数字则返回NaN(Not a Number)，不是一个数字。<br>    NaN类型number<br> 练习：查看以下程序的运行结果<br>  var num1=3, num2=true, num3=’tedu’;<br>  num1+num2+num3  //‘4tedu’<br>  num2+num3+num1  //‘truetedu3’<br>  num3+num1+num2  //‘tedu3true’<br> (2)强制转换<br>   ①将任意类型转为整型<br>     parseInt( )<br>     parseInt(‘1.5a’) //1<br>    从开头查找数字，遇到非数字或者小数点；返回前边的数字;如果开头是非数字，返回NaN。<br>   ②将任意类型转为浮点型<br>     parseFloat()<br>     parseFloat(‘1.5a’) //1.5<br>   转换规则和parseInt类似，区别在于遇到小数点继续往后查找数字。<br>   ③将任意类型转为数值型<br>     Number()<br>     Number(‘1.5a’) // NaN<br>   如果要转换的数据中含有非数字，返回NaN<br>     true -&gt; 1  false-&gt;0<br>   ④数值型和布尔型转为字符串型<br>     toString()<br>     var num=10;<br>     num.toString();    //‘10’<br>     num.toString(16);  //a<br>    如果要转换的数据是数值，可以设置进制(8,16,2)<br>3.运算符<br> 由运算符连接操作的数据，所组成的形式就是表达式<br> (1)算术运算符</p>
+<ul>
+<li><ul>
+<li><ul>
+<li>/  %  ++  –<br>% 取余<br>++  自增，在原来的基础之上加1<br>–   自减，在原来的基础之上减1<br>console.log(num++)  //先打印num的值，再执行自增<br>console.log(++num)  //先执行自增，再打印num的值<br>(2)比较运算符<blockquote>
+<p> &lt;  &gt;=  &lt;=  ==  !=  ===(全等于)  !==(不全等于)<br>返回一个布尔型的结果<br>==  只是比较两个值是否相同<br>=== 不仅比较值，还会比较类型是否相同<br>3&gt;’10’  //false<br>数字和字符串比较，字符串转成数字。<br>‘3’&gt;’10’  //true<br>比较首个字符的Unicode码，如果首个字符，则比较第二个字符<br>‘3’-&gt;51   ‘1’ -&gt; 49<br>3&gt;’10a’  //false<br>3&lt;’10a’  //false<br>3==’10a’ //false<br>‘10a’ -&gt; NaN<br>NaN和任何数比较(&gt; &gt;= &lt; &lt;= ==) 都返回false<br>NaN==NaN 返回false<br>(3)逻辑运算符<br>&amp;&amp;  并且    ||   或者    !  非<br>返回一个布尔型的结果<br>&amp;&amp;  关联的两个条件都满足，结果是true，否则false<br>||  关联的两个条件只需满足其一，结果是true，否则false<br>!  取反   !false -&gt; true  !true -&gt; false<br>练习：声明两个变量保存用户名和密码，如果用户名是’root’，并且密码是’123456’，打印true，否则打印false；<br>练习:声明一个变量保存年龄，如果年龄大于90岁，或者年龄小于3岁，打印true，否则打印false<br>逻辑短路<br>&amp;&amp;  当第一个条件为false的时候，就不需要再执行第二个条件<br>||  当第一个条件为true的时候，就不需要再执行第二个条件<br>练习：以下两个语句是否会报错。<br>var num=3;<br>num&gt;5 &amp;&amp; console.log(a);<br>num&lt;1 || console.log(a);<br>(4)位运算符(了解)<br>在执行运算符的时候，会把数字转成二进制进行运算<br>1 10  11  100  101  110  111  1000  1001  1010<br>2        4                      8<br>110101=100000+10000+100+1</p>
+<pre><code>32     16     4   1
+</code></pre><p>25 = 16+8+1<br> 10000+1000+1<br>11001<br>按位与(&amp;)   上下两位都是1，结果是1，否则是0<br>按位或(|)    上下两位含有1，结果是1，否则是0<br>按位异或(^) 上下两位不同为1，相同为0<br>按位右移(&gt;&gt;)  删除二进制的最后一位，大概变小到原来一半<br>按位左移(&lt;&lt;)  在二进制的最后添加一个0，增加一倍<br>(5)赋值运算符<br>=  +=  -=  *=  /=  %=<br>练习：声明变量保存商品的价格，打五折，计算价格。<br>(6)三目运算符<br>单目运算符：只需要一个数据或者表达式<br>a++   a–   !false<br>双目运算符：需要两个数据或者表达式</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><ul>
+<li><ul>
+<li>/  %  &gt; &lt;  &gt;=  &lt;=  ==  !=  ===  !==<br>&amp;&amp;  ||  &amp;  |  ^  &gt;&gt;  &lt;&lt;  =  +=  -=  *=  /=  %=<br>三目运算符：需要三个数据或者表达式<br>条件表达式 ?  表达式1  :  表达式2<br>如果条件表达式为true，执行表达式1；<br>如果条件表达式为false，执行表达式2；<br>练习：声明两个变量，分别保存两个数字；比较两个数字的大小，打印最大值的变量名。<br>练习：声明两个变量，分别保存用户名和密码；如果用户名是root，并且密码是123456，打印“登录成功”，否则打印“登录失败”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>课后任务：<br>  (1)复习今天内容，整理当天的思维导图<br>  (2)练习：<br>    声明一个变量保存年份，判断这个年份是否为闰年，如果是打印“是闰年”，否则打印“不是闰年”<br>    闰年：4年一个闰年(能被4整除，和4取余为0)，并且不能被100整除，或者能被400整除。<br>  (3)预习逻辑结构(if  if-else..)</p>
+
             </div>
             <hr>
 
@@ -450,7 +478,7 @@
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">复习 开发环境  浏览器  js  服务器  nodejs变量声明  var $_c1=3;  字母，数字，美元符号，下划线  var a;  undefined  a=1;  var a,b=2,c=5;常量声明  const PI=3.</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-07
