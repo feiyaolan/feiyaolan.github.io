@@ -5,9 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="二进制, web前端,blog搭建,基础">
-    <meta name="description" content="二进制就是以2为进位，十进制就是以10为进位。二进制：00   01  10  11  100。。。01—&amp;gt;10实际上就是01–&amp;gt;02  只是到2的时候要进一位了。所以就在最左边位上将0置为1 就是10
-">
+    <meta name="keywords" content="js_day03, web前端,blog搭建,基础">
+    <meta name="description" content="复习原始类型数据  数值型   整型和浮点型 3.14  3.14e2  字符串型    ‘1’  ‘undefined’    ‘a’.charCodeAt()  布尔型    true/false  未定义型    undefined ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>二进制 | 我的博客</title>
+    <title>js_day03 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -246,13 +245,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        二进制
+                        js_day03
                     </div>
                 </div>
             </div>
@@ -274,14 +273,22 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-08
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-10
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>二进制就是以2为进位，十进制就是以10为进位。<br>二进制：00   01  10  11  100。。。<br>01—&gt;10实际上就是01–&gt;02  只是到2的时候要进一位了。所以就在最左边位上将0置为1 就是10</p>
+                <p>复习<br>原始类型数据<br>  数值型   整型和浮点型 3.14  3.14e2<br>  字符串型<br>    ‘1’  ‘undefined’<br>    ‘a’.charCodeAt()<br>  布尔型<br>    true/false<br>  未定义型<br>    undefined<br>  空<br>    null<br>typeof(2)  number/string/boolean/undefined/object<br>数据类型转换<br>  隐式转换<br>   数值 + 字符串  = 字符串<br>   数值 + 布尔型  = 数值<br>   布尔型 + 字符串 = 字符串</p>
+<ul>
+<li>/ - 将数据转为数值型  NaN<br>强制转换<br>整型  parseInt(‘a1a’)  true/false  -&gt; NaN<br>浮点型  parseFloat(‘a1.5a’)  true/false -&gt; NaN<br>数值型  Number(‘1.5a’)  true/false  -&gt; 1/0<br>转字符串(数值和布尔型)  15.toString(2)<br>运算符<br>算术运算符  + - <em> /  %  ++  –<br>比较运算符 &gt; &lt; &gt;= &lt;= == != === !==<br>逻辑运算符  或且非   ||   &amp;&amp;  !  逻辑短路<br>位运算符  &amp;  |  ^  &gt;&gt;  &lt;&lt;<br>赋值运算符 =  +=  -=  </em>=  /=  %=<br>三目运算符  条件表达式 ? 表达式1 : 表达式2</li>
+</ul>
+<p>学习一门编程语言的基本步骤<br>(1)了解背景知识：历史、现状、特点、应用场景。<br>(2)搭建开发环境，编写hello world<br>(3)变量和常量<br>(4)数据类型<br>(5)运算符<br>(6)逻辑结构<br>(7)通用小程序<br>(8)函数和对象<br>(9)第三方库、框架<br>(10)实用的项目</p>
+<p>练习：<br>    声明一个变量保存年份，判断这个年份是否为闰年，如果是打印“是闰年”，否则打印“不是闰年”<br>    闰年：4年一个闰年(能被4整除，和4取余为0)，并且不能被100整除，或者能被400整除。<br>  4年一闰，100年不闰，400年再闰</p>
+<p>1.浏览器端函数<br>  alert()   弹出警示框(消息框)<br>  prompt()  弹出提示框(输入框)，需要使用变量来接收输入的值；值的类型是字符串型。<br>2.流程控制<br> 程序 = 算法 + 数据<br> 程序分为顺序执行、选择执行、循环执行<br> (1)if语句<br>  满30减15</p>
+<p> 语句1;<br> if(条件表达式){<br>   语句2;<br> }<br> 语句3;<br>执行流程：<br>  ①执行语句1<br>  ②执行条件表达式，如果为true，执行语句2；false跳过<br>  ③执行语句3<br>注意：如果if后的大括号语句中只有一行，是可以省略大括号。<br>if(age&gt;=18)<br>  console.log(‘成年人’);<br>在if语句的条件表达式中，有一些值默认就是false<br>   0、NaN、’’、undefined、null<br> (2)if-else语句<br>语句1;<br>if(条件表达式){<br>   语句2;<br>}else{<br>   语句3;<br>}<br>执行过程：<br>  ①执行语句1<br>  ②执行条件表达式，如果是true，执行语句2；如果是false，执行语句3<br> 练习：使用弹出提示框分别输入商品的价格和数量，判断商品总价是否满500，如果满500打八折；使用变量保存当前余额为600，如果总价足够支付，则打印支付成功，否则打印余额不足。  05_exercise.html  05_exercise.js<br> (3)if-else的嵌套<br>  用于判断多种情况<br> 语句0;<br> if(条件表达式1){<br>   语句1;<br> }else if(条件表达式2){<br>   语句2;<br> }else…if(条件表达式n){<br>   语句n;<br> }else{<br>   语句n+1; //以上所有的条件表达式都是false<br> }<br>执行流程：<br>  ①执行语句0<br>  ②执行条件表达式1<br>     如果条件表达式1是true，执行语句1<br>     如果条件表达式1是false，执行条件表达式2<br>        如果条件表达式2是true，执行语句2<br>        如果条件表达式2是false，执行条件表达式n<br>  ③以上所有的条件表达式为false，执行语句n+1<br>练习：声明变量保存订单的状态码（1,2,3,4,5…）<br>1-等待付款  2-等待发货  3-运输中  4-已签收  5-已取消<br>根据状态码打印对应内容；不存在的状态码打印‘非法的状态’<br>2.switch-case语句<br>  是一种特殊的分支语句，可以根据一个表达式的不同值，来选择执行不同的程序。<br> 语句0;<br> switch(表达式){<br>   case 1: //如果表达式的值是1<br>     语句1;<br>     break; //终止，不会再往后执行其它语句<br>   ….<br>   case n:<br>     语句n;<br>     break;<br>   default:<br>     语句n+1;<br> }<br>  注意：在case中表达式和值的比较使用的是全等于比较，要求值和类型都满足结果才是true。<br>  对比if-else嵌套和switch-case语句<br>  相同点：两者都可以用于多项分支语句。<br>  不同点：if-else可以判断相等或者不等的情况，使用范围更广；switch-case只使用全等的情况，结构上更为清晰，执行效率相对高。<br>3.循环执行<br> 循环：就是一遍又一遍执行相同或者相似的代码。<br> 循环的两个要素<br>   循环的条件：重复的次数<br>   循环体：重复执行的相同或者相似代码<br> (1)while循环<br> while(循环的条件){  //是一个布尔型的值<br>   循环体<br> }  </p>
+<p>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>     使用while循环打印  11~19之间所有的整数<br>     使用while循环打印  1~100之间所有的奇数(使用if判断是否为奇数)<br>     使用while循环打印 20 22 24 26 28 30<br>     使用while循环计算1~100之间所有的整数和<br>  (3)预习do-while和for循环<br>  《JavaScript高级程序设计》第三版  红宝石书</p>
 
             </div>
             <hr>
@@ -420,7 +427,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/08/二进制/" class="b-link-green">二进制</a>
+                    <a href="/2018/12/10/js-day03/" class="b-link-green">js_day03</a>
                 </p>
             </div>
         </div>
@@ -440,7 +447,39 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
+            <div class="card">
+                <a href="/2018/12/10/js-day03/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="js_day03">
+                        
+                        <span class="card-title">js_day03</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">复习原始类型数据  数值型   整型和浮点型 3.14  3.14e2  字符串型    ‘1’  ‘undefined’    ‘a’.charCodeAt()  布尔型    true/false  未定义型    undefined </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            费尧岚
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
                 <a href="/2018/12/08/Markdown-语法整理大集合2017/">
                     <div class="card-image">
@@ -457,39 +496,8 @@
 h1h2h3h4h5h6####### h7      // 错误代码
 ######## h8     // 错误代码</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-08
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            费尧岚
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">下一篇</div>
-            <div class="card">
-                <a href="/2018/12/07/jsday02/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="jsday02">
-                        
-                        <span class="card-title">jsday02</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">复习 开发环境  浏览器  js  服务器  nodejs变量声明  var $_c1=3;  字母，数字，美元符号，下划线  var a;  undefined  a=1;  var a,b=2,c=5;常量声明  const PI=3.</div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-07
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-08
                             </span>
                         <span class="publish-author">
                             
