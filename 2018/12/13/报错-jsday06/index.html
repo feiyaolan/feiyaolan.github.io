@@ -290,6 +290,7 @@ TypeError">
 <p>var emp={<br>eid:2,<br>    ename:’jones’,<br>    sex:0,<br>    birthday:1997-8-1,//此处要加引号，否则打印是1988<br>    salary:9000,<br>    deptId:20<br>};<br>//获取每一个属性的属性名及其属性值 var key 用于存储每一个属性的名称<br>for(var key in emp){<br>//console.log(key);//eid ename sex birthday salary deptId<br>//console.log(emp[key]);//2 jones 0 1988 9000 20,使用key来获取对应的属性值<br>//console.log(emp.key);//key被当成属性名，undefined<br>console.log(key+’—‘emp[key]);<br>}<br>报错SyntaxError: missing ) after argument list<br>    at createScript (vm.js:80:10)<br>原因：console.log(key+’—‘emp[key]);改为console.log(key+’—‘+emp[key]);</p>
 <p>var emp{<br>eid:3,<br>    ename:’tom’,<br>    esecret:’123456’,<br>    etelphong:’13978964569’,<br>    eemail:<a href="mailto:&#39;1313131313@qq.com" target="_blank" rel="noopener">&#39;1313131313@qq.com</a>‘<br>};<br>for(var key in emp){<br>console.log(key);<br>}<br>报错SyntaxError: Unexpected token {<br>    at createScript (vm.js:80:10)<br>    at Object.runInThisContext (vm.js:139:10)</p>
 <p> 原因var emp{ 改为 var emp={</p>
+<p> //创建对象，添加属性和方法<br>var person={<br>name:’tom’,<br>    sex:’男’,<br>    age:18,<br>    //添加一个说话的方法<br>say:function(){<br>console.log(‘我叫tom’);<br>},<br>    //添加唱歌的方法<br>    song:function(){<br>console.log(‘happy’);<br>}<br>};<br>//调用对象中的方法（函数）<br>person.say();//报错——此处console.log(person.say());—&gt;undefined<br>person.song();<br>// 什么时候必须用console.log才能显示，什么时候不用就会显示</p>
 
             </div>
             <hr>
