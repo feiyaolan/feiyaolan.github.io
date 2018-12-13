@@ -5,8 +5,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="js_day04, web前端,blog搭建,基础">
-    <meta name="description" content="复习弹出警示框 alert()弹出提示框 var a=prompt()程序执行：顺序执行，选择执行，循环执行if(条件表达式){ 语句； }if(条件表达式){ 语句1; }else{ 语句2; }if(条件表达式1){ 语句1; }els">
+    <meta name="keywords" content="报错_jsday06, web前端,blog搭建,基础">
+    <meta name="description" content="console.log(getSum(100));var getSum=function(n){    for (i=1,sum=0;i&amp;lt;=n ;i++ )    {sum+=i;}    return sum;}
+TypeError">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>js_day04 | 我的博客</title>
+    <title>报错_jsday06 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -245,13 +246,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        js_day04
+                        报错_jsday06
                     </div>
                 </div>
             </div>
@@ -273,27 +274,22 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-11
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-13
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>复习<br>弹出警示框 alert()<br>弹出提示框 var a=prompt()<br>程序执行：顺序执行，选择执行，循环执行<br>if(条件表达式){ 语句； }<br>if(条件表达式){ 语句1; }else{ 语句2; }<br>if(条件表达式1){ 语句1; }else if(条件表达式2){ }…..else{   }<br>var type=’群众’<br>switch(type){ case ‘团员’: … break; …  default: }<br>循环执行<br>  一遍又一遍执行相同或者相似的代码<br>  循环条件<br>  循环体 </p>
-<p>学习一门编程语言的基本步骤<br>(1)了解背景知识：历史、现状、特点、应用场景。<br>(2)搭建开发环境，编写hello world<br>(3)变量和常量<br>(4)数据类型<br>(5)运算符<br>(6)逻辑结构<br>(7)通用小程序<br>(8)函数和对象<br>(9)第三方库、框架<br>(10)实用的项目</p>
-<p>1.break关键字<br>  break可以结束任何形式的循环<br>  练习：使用无线循环形式来计算1~10所有数字相乘的结果。<br>  练习：使用变量保存1个数字，循环弹出提示框的形式输入数字，如果数字猜大了，警示框提示’big’；如果数字猜小了，警示框提示’small’；否则提示’right’，结束循环。<br>     03_break.html  03_break.js<br> 说明： ‘’(空字符)在和数字比较的时候，转成0<br>2.do-while循环</p>
-<p>do{<br>  循环体<br>}while(循环条件);<br> 不管循环条件是否为true，都会执行一次循环体。<br> 练习：声明变量保存密码’123456’; 循环弹出提示框输入密码，如果输入正确，警示框弹出’login success’，结束循环。<br>  05_dowhile.js   05_dowhile.html<br>3.for循环</p>
-<p> 1~10<br>for(初始值;循环条件;i的变化){<br>  循环体<br>}<br>①执行初始值<br>②判断循环条件<br>③如果循环体是true执行循环体，是false结束循环<br>④如果执行了循环体，执行i的变化<br>⑤重新执行第2步<br>4.break和continue<br> break: 结束循环，后续不会再执行其它的循环<br> continue: 跳过本次循环，继续下一次循环<br> 练习：计算1~100之间所有偶数的和(遇到奇数跳过)<br> 练习：打印1,2,5,7,10,11,13,14,17….98<br>     打印1~100之间，去除所有能被3或4整除的数。<br> 练习：计算新中国成立后一共有多少个闰年。<br> 练习：打印本世纪的前10个闰年<br> 练习：计算1~100之间的和，当和大于4000的时候，结束循环，打印总和以及当前i的值。<br>5.循环嵌套<br> while，do-while，for循环三者之间可以相互嵌套。</p>
-<hr>
-<hr>
-<hr>
-<hr>
-<p>*<br>**</p>
-<hr>
-<hr>
-<hr>
-<p>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>     打印倒着的99乘法表<br>    9<em>9=81  8</em>9=72.<br>    8<em>8=64<br>    ….<br>    1</em>1=1<br>  (3)预习JS中自定义函数<br>  .</p>
+                <p>console.log(getSum(100));<br>var getSum=function(n){<br>    for (i=1,sum=0;i&lt;=n ;i++ )<br>    {sum+=i;}<br>    return sum;}</p>
+<p>TypeError: getSum is not a function</p>
+<p>正确写法var getSum=function(n){<br>    for (i=1,sum=0;i&lt;=n ;i++ )<br>    {sum+=i;}<br>    return sum;}<br>    console.log(getSum(100));</p>
+<p>创建一个部门对象，（一个部门，一个员工，一条新闻，一个用户，一个订单都是对象）属性有部门编号，名称，员工数量<br>var bm{bid:20,bname:”IT部门”,bcount:20};<br>console.log(bm);<br>创建一个员工对象，属性有编号，姓名，性别，生日，工资，所属部门<br>var yg{yid:2,yname:’李伟’,ysex:1,birthday:1992-12-06,salary:8999,ybm:20};<br>console.log(yg);<br>报错：SyntaxError: Unexpected token ,bm和yg后面没加等号</p>
+<p>var book=new Object();<br>book.’title’=’三国演义’;<br>console.log(book);  //SyntaxError: Unexpected string不希望出现的字符串—-》不能给属性名加引号<br>正确book.title=’三国演义’;</p>
+<p>var car=new Object();<br>car[brand]=’特斯拉’;<br>console.log(car);<br>报错//ReferenceError: brand is not defined,未定义，不加引号默认为一个变量</p>
+<p>var emp={<br>eid:2,<br>    ename:’jones’,<br>    sex:0,<br>    birthday:1997-8-1,//此处要加引号，否则打印是1988<br>    salary:9000,<br>    deptId:20<br>};<br>//获取每一个属性的属性名及其属性值 var key 用于存储每一个属性的名称<br>for(var key in emp){<br>//console.log(key);//eid ename sex birthday salary deptId<br>//console.log(emp[key]);//2 jones 0 1988 9000 20,使用key来获取对应的属性值<br>//console.log(emp.key);//key被当成属性名，undefined<br>console.log(key+’—‘emp[key]);<br>}<br>报错SyntaxError: missing ) after argument list<br>    at createScript (vm.js:80:10)<br>原因：console.log(key+’—‘emp[key]);改为console.log(key+’—‘+emp[key]);</p>
+<p>var emp{<br>eid:3,<br>    ename:’tom’,<br>    esecret:’123456’,<br>    etelphong:’13978964569’,<br>    eemail:<a href="mailto:&#39;1313131313@qq.com" target="_blank" rel="noopener">&#39;1313131313@qq.com</a>‘<br>};<br>for(var key in emp){<br>console.log(key);<br>}<br>报错SyntaxError: Unexpected token {<br>    at createScript (vm.js:80:10)<br>    at Object.runInThisContext (vm.js:139:10)</p>
+<p> 原因var emp{ 改为 var emp={</p>
 
             </div>
             <hr>
@@ -432,7 +428,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/11/js-day04/" class="b-link-green">js_day04</a>
+                    <a href="/2018/12/13/报错-jsday06/" class="b-link-green">报错_jsday06</a>
                 </p>
             </div>
         </div>
@@ -452,7 +448,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2018/12/13/报错-jsday06/">
                     <div class="card-image">
@@ -467,9 +463,9 @@
                     <div class="summary">console.log(getSum(100));var getSum=function(n){    for (i=1,sum=0;i&lt;=n ;i++ )    {sum+=i;}    return sum;}
 TypeError</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -478,6 +474,7 @@ TypeError</div>
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -486,20 +483,20 @@ TypeError</div>
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/10/js-day03/">
+                <a href="/2018/12/11/js-day04/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="js_day03">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="js_day04">
                         
-                        <span class="card-title">js_day03</span>
+                        <span class="card-title">js_day04</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习原始类型数据  数值型   整型和浮点型 3.14  3.14e2  字符串型    ‘1’  ‘undefined’    ‘a’.charCodeAt()  布尔型    true/false  未定义型    undefined </div>
+                    <div class="summary">复习弹出警示框 alert()弹出提示框 var a=prompt()程序执行：顺序执行，选择执行，循环执行if(条件表达式){ 语句； }if(条件表达式){ 语句1; }else{ 语句2; }if(条件表达式1){ 语句1; }els</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-10
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-11
                             </span>
                         <span class="publish-author">
                             
