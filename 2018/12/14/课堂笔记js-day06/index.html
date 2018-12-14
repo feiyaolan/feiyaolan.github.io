@@ -5,8 +5,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="课堂笔记js_day05, web前端,blog搭建,基础">
-    <meta name="description" content="复习while(循环条件){  循环体  }do{ 循环体 }while(循环条件)for(初始值;循环条件;i的变化){  循环体  }break  和  continuevar i=0;var sum=0;do{  i++;  if(i">
+    <meta name="keywords" content="课堂笔记js_day06, web前端,blog搭建,基础">
+    <meta name="description" content="复习
+学习一门编程语言的基本步骤(1)了解背景知识：历史、现状、特点、应用场景。(2)搭建开发环境，编写hello world(3)变量和常量(4)数据类型(5)运算符(6)逻辑结构(7)通用小程序(8)函数和对象(9)第三方库、框架(10">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>课堂笔记js_day05 | 我的博客</title>
+    <title>课堂笔记js_day06 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -245,13 +246,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        课堂笔记js_day05
+                        课堂笔记js_day06
                     </div>
                 </div>
             </div>
@@ -280,13 +281,9 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>复习<br>while(循环条件){  循环体  }<br>do{ 循环体 }while(循环条件)<br>for(初始值;循环条件;i的变化){  循环体  }<br>break  和  continue<br>var i=0;<br>var sum=0;<br>do{<br>  i++;<br>  if(i%2==0){<br>    continue;<br>  }<br>  if(i%5==0){<br>    break;<br>  }<br>  sum+=i;<br>}while(i&lt;10)<br>循环嵌套</p>
+                <p>复习</p>
 <p>学习一门编程语言的基本步骤<br>(1)了解背景知识：历史、现状、特点、应用场景。<br>(2)搭建开发环境，编写hello world<br>(3)变量和常量<br>(4)数据类型<br>(5)运算符<br>(6)逻辑结构<br>(7)通用小程序<br>(8)函数和对象<br>(9)第三方库、框架<br>(10)实用的项目</p>
-<p>学习目标<br>  函数相关(重点)<br>  变量的作用域(重点)<br>  函数的作用域(重点)<br>  递归调用(掌握)</p>
-<p>1.函数<br> parseInt()/parseFloat()/typeof()…<br> 分为系统函数和自定义函数<br> 自定义函数<br>   函数function（有时也被称为方法，是一段预定义号，并可以被反复使用的代码块）：功能体，函数，可以接受若干个数据，返回处理的结果。用于封装反复执行的代码。—— 饺子机<br> (1)创建普通函数<br> function 函数名称(){<br>   函数体——要封装的反复执行的代码<br> }<br> 调用<br>  函数名称();<br>练习：使用函数封装10+20的结果，并打印出来，调用3次。<br>练习：使用函数封装计算1~100所有数字的和，打印结果，调用3次。<br> (2)创建带有参数的函数<br> function 函数名称(参数列表){  //形参-&gt;形式上的参数<br>  函数体，用于接收传递的数据<br> }<br> 调用<br>  函数名称(参数列表); //实参-&gt;实际的参数——&gt;实际传递的数据+<br> 参数列表：可以是0个或者是多个数据，之间用逗号隔开；创建函数时的参数称为形参，调用函数时的参数成为实参，调用的时候，实参的值会赋给形参。<br>   形参本质上就是一个声明了的变量，但未赋值。<br> 练习：创建函数getSum，传递1个参数，计算1~任意数字之间的和。<br> 练习：创建函数getRun，传递2个参数，打印任意两个年份之间的所有闰年个数。<br> (3)带有返回值的函数<br> function 函数名称(参数列表){<br>   函数体<br>   return 返回值;<br> }<br> 调用<br>   函数名称(参数列表)<br> return表示函数执行后，所返回的结果。<br> 注意：<br>   ①如果没有return或者return后没有返回值，结果都是undefined。<br>   ②return可以返回任意类型的数据<br>   ③return后的所有代码都不会被执行<br>练习：创建函数add，传递3个参数，返回3个数字的和。<br>练习：创建函数getMax，传递2个参数，返回最大值。<br>练习：创建函数getMax，传递3个参数，返回最大值。<br>练习：创建函数isRun，传递1个参数(年份)，是闰年返回true，不是闰年返回false。<br>练习：创建函数getStatus，传递1个参数(订单状态码)，返回对应的中文；<br> 1-待付款  2-待发货 3-运输中 4-已签收  5-已取消  其它状态码-无法查询<br> 对比return、break和continue<br> return 返回结果，用于终止函数的执行，常用于函数中。<br> break 用于结束循环，结束switch语句；<br> continue 跳过当前循环，继续下一次循环。<br>2.变量的作用域<br> (1)作用域<br>  变量或者函数的可访问范围<br>  分为两种：<br>   全局作用域：在全局作用域下声明的变量可以在任意位置访问到。<br>   函数(局部)作用域：函数作用域下声明的变量只能在函数内部访问。<br>   注意：在函数内部使用var关键字声明的变量是局部变量，不适用var关键字声明的变量是全局变量。<br> (2)变量声明提升<br>  JS程序执行前，使用var关键字声明的变量会提升到所在作用域的最前边；但赋值还是在原来的位置。<br>console.log(a);<br>var a=1; //var a;会提升到前边; 而 a=1还是在当前位置;<br>3.函数的作用域<br>  函数和变量类似，也分为全局作用域和函数(局部)作用域<br>  全局作用域：在全局作用域下创建的函数可以在任意位置调用<br>  函数(局部)作用域：在函数(局部)作用域下创建的函数只能在函数内部调用<br>  函数声明提升<br>    和变量一样，JS在程序执行前，把使用function声明的函数提升到最前边。注意，如果函数名和变量名一致，变量会覆盖函数；先提升函数，再提升变量。<br>function fun(){<br>   return 1;<br>}<br>   函数调用  fun()  获取函数的返回值(return后的值)<br>   函数名称  fun   保存的是函数在堆内存中的地址</p>
-<p>4.递归的调用<br> 在函数的内部调用自身<br> 递归要有跳出条件，需要结合return使用。</p>
-<p> 斐波那契数列<br> 1  1  2  3  5  8  13  21  34  55  89  144</p>
-<p>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>     创建函数，传递1个参数，使用递归计算斐波那契数列的第n项是多少<br>  (3)预习JS的对象</p>
+<p>1.匿名函数<br>  没有名字的函数   function(){    }<br>创建函数——函数声明<br>function  函数名称(){}<br> (1)创建函数——函数表达式<br> var 函数名称=function(形参列表){<br>   函数体<br>   return 返回值;<br> }<br> 调用：函数名称(实参列表)<br> 对比函数声明和函数表达式的区别<br> 函数声明存在函数提升，在任何的位置都可以调用<br> 函数表达式不存在函数提升，必须先创建再调用<br> 练习：使用函数表达式来计算1~100之间的和。<br> (2)匿名函数自调用<br>  创建函数(局部)作用域，防止造成全局污染。<br>  (function(){<br>    函数体//就是局部作用域,创建的变量和函数都是不能被外部访问<br>  })();<br> (3)作为回调函数<br>  把匿名函数作为实参传递给形参，此时的形参就是函数名称<br> function fn(num){<br>    //num就是函数的名称<br>    num();  //调用传递的匿名函数<br> }<br> fn(function(){ … });<br>练习：创建函数add，传递2个参数，2个参数都是以匿名函数的形式传递；在匿名函数中分别返回1个数字。<br>最后在add中计算两个数字相加。<br>2.系统函数(全局函数)<br>  encodeURI   对一个url进行编码<br>  decodeURI   对一个已经编码的url进行解码<br>  parseInt      将数据转为整型<br>  parseFloat    将数据转为浮点型<br>  isNaN  检测一个数据是否为NaN  是-&gt;true 不是-&gt;false<br>  isFinite 检测一个数据是否为有限值，是-&gt;true 不是-&gt;false     1/0 -&gt; Infinity 无限值<br>  eval  执行字符中的表达式  eval(‘1+2’)  -&gt; 3<br> 练习：使用弹出提示框输入一组运算，使用eval执行这组运算。 06_eval.html   06_eval.js<br>3.对象<br> 是一种引用类型的数据，存储在堆内存中。<br> 对象：是一组属性(property)和方法/功能(method)的集合<br> 哪些是对象？<br>  一个手机: 属性有颜色，品牌，尺寸，厚度… 功能有打电话、发短信、照相、聊天、游戏….<br>  一辆汽车：属性有品牌、外观、车型… 功能有代步、撞人、拉货、取暖、乘凉…<br> (1)JS中的对象<br>  内置对象：JS提供的<br>  宿主对象：根据不同的执行环境来划分<br>  自定义对象：自己创建的对象<br> (2)创建自定义对象<br>  ①对象字面量(直接量)<br>  ②内置构造函数<br>  ③自定义构造函数<br>4.使用对象字面量创建对象<br>  使用大括号{ }创建空对象<br>  属性名和属性值之间用冒号隔开<br>  多组属性之间用逗号隔开<br>  属性名中引号可加可不加，如果出现特殊字符，必须添加引号<br> var phone={ color:’red’, ‘made-in’:’china’ };<br> 练习：创建一个部门对象，属性有部门编号，名称，员工数量<br> 练习：创建一个员工对象，属性有编号，姓名，性别，生日，工资，所在部门<br>5.使用内置构造函数创建对象<br>var book=new Object();  //创建一个空对象<br>book.id=103;  //添加属性，属性名不能添加引号<br>book[‘titlte’]=’三国演义’; //添加属性，属性名必须加引号；如果不加引号，会被认为是变量.<br> 练习：创建一个汽车对象，属性有编号，品牌，颜色，价格<br> 练习：创建一个电脑对象，属性有型号，品牌，尺寸，产地<br>6.访问对象中的属性<br> (1)获取属性值<br>  emp.eid<br>  emp[‘ename’]<br> 如果要获取的属性名不存在，返回undefined<br> (2)遍历对象中的属性(for-in)<br>  获取对象中每一个属性名，进而获取属性值<br> for(var key in emp){<br>   //emp 要遍历的对象<br>   //key 要遍历的每一个属性名<br>   //emp[key]  通过属性名获取对应的属性值<br> }<br> 注意：for-in不能遍历预定义(JS默认为每一个对象添加的)属性。<br>练习：创建一个商品对象，包含编号，标题，价格，是否在售(isOnsale)，商品库存量(stockCount)，使用for-in遍历所有的属性。<br>7.检测对象中是否含有某个属性<br>  ‘属性名’  in  对象  // true-&gt;存在  false-&gt;不存在<br>  对象.hasOwnProperty(‘属性名’) //true-&gt;存在 false-&gt;不存在<br>  对象.属性名=== undefined //true-&gt;不存在  false-&gt;存在<br>8.对象中的方法<br> var person={<br>   name: ‘tom’,<br>   say: function(){<br>      this.name  //this指代当前的对象<br>   }<br> }<br> person.say(); //调用对象中的方法<br>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>     创建一个圆对象，添加属性半径，圆周率；添加方法计算周长(getLength)和计算面积(getArea)；分别返回圆的周长和面积<br>  (3)预习JS中的数组</p>
 
             </div>
             <hr>
@@ -425,7 +422,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/14/课堂笔记js-day05-1/" class="b-link-green">课堂笔记js_day05</a>
+                    <a href="/2018/12/14/课堂笔记js-day06/" class="b-link-green">课堂笔记js_day06</a>
                 </p>
             </div>
         </div>
@@ -445,7 +442,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2018/12/14/课堂笔记js-day06/">
                     <div class="card-image">
@@ -460,9 +457,9 @@
                     <div class="summary">复习
 学习一门编程语言的基本步骤(1)了解背景知识：历史、现状、特点、应用场景。(2)搭建开发环境，编写hello world(3)变量和常量(4)数据类型(5)运算符(6)逻辑结构(7)通用小程序(8)函数和对象(9)第三方库、框架(10</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -471,6 +468,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -479,21 +477,20 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/13/报错-jsday06/">
+                <a href="/2018/12/14/课堂笔记js-day05-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="报错_jsday06">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="课堂笔记js_day05">
                         
-                        <span class="card-title">报错_jsday06</span>
+                        <span class="card-title">课堂笔记js_day05</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">console.log(getSum(100));var getSum=function(n){    for (i=1,sum=0;i&lt;=n ;i++ )    {sum+=i;}    return sum;}
-TypeError</div>
+                    <div class="summary">复习while(循环条件){  循环体  }do{ 循环体 }while(循环条件)for(初始值;循环条件;i的变化){  循环体  }break  和  continuevar i=0;var sum=0;do{  i++;  if(i</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-13
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-14
                             </span>
                         <span class="publish-author">
                             
