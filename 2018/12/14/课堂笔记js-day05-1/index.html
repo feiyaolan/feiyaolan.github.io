@@ -5,9 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="报错_jsday06, web前端,blog搭建,基础">
-    <meta name="description" content="console.log(getSum(100));var getSum=function(n){    for (i=1,sum=0;i&amp;lt;=n ;i++ )    {sum+=i;}    return sum;}
-TypeError">
+    <meta name="keywords" content="课堂笔记js_day05, web前端,blog搭建,基础">
+    <meta name="description" content="复习while(循环条件){  循环体  }do{ 循环体 }while(循环条件)for(初始值;循环条件;i的变化){  循环体  }break  和  continuevar i=0;var sum=0;do{  i++;  if(i">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +14,7 @@ TypeError">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>报错_jsday06 | 我的博客</title>
+    <title>课堂笔记js_day05 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -246,13 +245,13 @@ TypeError">
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        报错_jsday06
+                        课堂笔记js_day05
                     </div>
                 </div>
             </div>
@@ -274,23 +273,20 @@ TypeError">
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-13
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-14
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>console.log(getSum(100));<br>var getSum=function(n){<br>    for (i=1,sum=0;i&lt;=n ;i++ )<br>    {sum+=i;}<br>    return sum;}</p>
-<p>TypeError: getSum is not a function</p>
-<p>正确写法var getSum=function(n){<br>    for (i=1,sum=0;i&lt;=n ;i++ )<br>    {sum+=i;}<br>    return sum;}<br>    console.log(getSum(100));</p>
-<p>创建一个部门对象，（一个部门，一个员工，一条新闻，一个用户，一个订单都是对象）属性有部门编号，名称，员工数量<br>var bm{bid:20,bname:”IT部门”,bcount:20};<br>console.log(bm);<br>创建一个员工对象，属性有编号，姓名，性别，生日，工资，所属部门<br>var yg{yid:2,yname:’李伟’,ysex:1,birthday:1992-12-06,salary:8999,ybm:20};<br>console.log(yg);<br>报错：SyntaxError: Unexpected token ,bm和yg后面没加等号</p>
-<p>var book=new Object();<br>book.’title’=’三国演义’;<br>console.log(book);  //SyntaxError: Unexpected string不希望出现的字符串—-》不能给属性名加引号<br>正确book.title=’三国演义’;</p>
-<p>var car=new Object();<br>car[brand]=’特斯拉’;<br>console.log(car);<br>报错//ReferenceError: brand is not defined,未定义，不加引号默认为一个变量</p>
-<p>var emp={<br>eid:2,<br>    ename:’jones’,<br>    sex:0,<br>    birthday:1997-8-1,//此处要加引号，否则打印是1988<br>    salary:9000,<br>    deptId:20<br>};<br>//获取每一个属性的属性名及其属性值 var key 用于存储每一个属性的名称<br>for(var key in emp){<br>//console.log(key);//eid ename sex birthday salary deptId<br>//console.log(emp[key]);//2 jones 0 1988 9000 20,使用key来获取对应的属性值<br>//console.log(emp.key);//key被当成属性名，undefined<br>console.log(key+’—‘emp[key]);<br>}<br>报错SyntaxError: missing ) after argument list<br>    at createScript (vm.js:80:10)<br>原因：console.log(key+’—‘emp[key]);改为console.log(key+’—‘+emp[key]);</p>
-<p>var emp{<br>eid:3,<br>    ename:’tom’,<br>    esecret:’123456’,<br>    etelphong:’13978964569’,<br>    eemail:<a href="mailto:&#39;1313131313@qq.com" target="_blank" rel="noopener">&#39;1313131313@qq.com</a>‘<br>};<br>for(var key in emp){<br>console.log(key);<br>}<br>报错SyntaxError: Unexpected token {<br>    at createScript (vm.js:80:10)<br>    at Object.runInThisContext (vm.js:139:10)</p>
-<p> 原因var emp{ 改为 var emp={</p>
-<p> //创建对象，添加属性和方法<br>var person={<br>name:’tom’,<br>    sex:’男’,<br>    age:18,<br>    //添加一个说话的方法<br>say:function(){<br>console.log(‘我叫tom’);<br>},<br>    //添加唱歌的方法<br>    song:function(){<br>console.log(‘happy’);<br>}<br>};<br>//调用对象中的方法（函数）<br>person.say();//—&gt;显示我叫tom,若此处换成console.log(person.say());—&gt;报错，显示undefined<br>person.song();<br>// 什么时候必须用console.log才能显示，什么时候不用就会显示</p>
+                <p>复习<br>while(循环条件){  循环体  }<br>do{ 循环体 }while(循环条件)<br>for(初始值;循环条件;i的变化){  循环体  }<br>break  和  continue<br>var i=0;<br>var sum=0;<br>do{<br>  i++;<br>  if(i%2==0){<br>    continue;<br>  }<br>  if(i%5==0){<br>    break;<br>  }<br>  sum+=i;<br>}while(i&lt;10)<br>循环嵌套</p>
+<p>学习一门编程语言的基本步骤<br>(1)了解背景知识：历史、现状、特点、应用场景。<br>(2)搭建开发环境，编写hello world<br>(3)变量和常量<br>(4)数据类型<br>(5)运算符<br>(6)逻辑结构<br>(7)通用小程序<br>(8)函数和对象<br>(9)第三方库、框架<br>(10)实用的项目</p>
+<p>学习目标<br>  函数相关(重点)<br>  变量的作用域(重点)<br>  函数的作用域(重点)<br>  递归调用(掌握)</p>
+<p>1.函数<br> parseInt()/parseFloat()/typeof()…<br> 分为系统函数和自定义函数<br> 自定义函数<br>   函数function（有时也被称为方法，是一段预定义号，并可以被反复使用的代码块）：功能体，函数，可以接受若干个数据，返回处理的结果。用于封装反复执行的代码。—— 饺子机<br> (1)创建普通函数<br> function 函数名称(){<br>   函数体——要封装的反复执行的代码<br> }<br> 调用<br>  函数名称();<br>练习：使用函数封装10+20的结果，并打印出来，调用3次。<br>练习：使用函数封装计算1~100所有数字的和，打印结果，调用3次。<br> (2)创建带有参数的函数<br> function 函数名称(参数列表){  //形参-&gt;形式上的参数<br>  函数体，用于接收传递的数据<br> }<br> 调用<br>  函数名称(参数列表); //实参-&gt;实际的参数——&gt;实际传递的数据+<br> 参数列表：可以是0个或者是多个数据，之间用逗号隔开；创建函数时的参数称为形参，调用函数时的参数成为实参，调用的时候，实参的值会赋给形参。<br>   形参本质上就是一个声明了的变量，但未赋值。<br> 练习：创建函数getSum，传递1个参数，计算1~任意数字之间的和。<br> 练习：创建函数getRun，传递2个参数，打印任意两个年份之间的所有闰年个数。<br> (3)带有返回值的函数<br> function 函数名称(参数列表){<br>   函数体<br>   return 返回值;<br> }<br> 调用<br>   函数名称(参数列表)<br> return表示函数执行后，所返回的结果。<br> 注意：<br>   ①如果没有return或者return后没有返回值，结果都是undefined。<br>   ②return可以返回任意类型的数据<br>   ③return后的所有代码都不会被执行<br>练习：创建函数add，传递3个参数，返回3个数字的和。<br>练习：创建函数getMax，传递2个参数，返回最大值。<br>练习：创建函数getMax，传递3个参数，返回最大值。<br>练习：创建函数isRun，传递1个参数(年份)，是闰年返回true，不是闰年返回false。<br>练习：创建函数getStatus，传递1个参数(订单状态码)，返回对应的中文；<br> 1-待付款  2-待发货 3-运输中 4-已签收  5-已取消  其它状态码-无法查询<br> 对比return、break和continue<br> return 返回结果，用于终止函数的执行，常用于函数中。<br> break 用于结束循环，结束switch语句；<br> continue 跳过当前循环，继续下一次循环。<br>2.变量的作用域<br> (1)作用域<br>  变量或者函数的可访问范围<br>  分为两种：<br>   全局作用域：在全局作用域下声明的变量可以在任意位置访问到。<br>   函数(局部)作用域：函数作用域下声明的变量只能在函数内部访问。<br>   注意：在函数内部使用var关键字声明的变量是局部变量，不适用var关键字声明的变量是全局变量。<br> (2)变量声明提升<br>  JS程序执行前，使用var关键字声明的变量会提升到所在作用域的最前边；但赋值还是在原来的位置。<br>console.log(a);<br>var a=1; //var a;会提升到前边; 而 a=1还是在当前位置;<br>3.函数的作用域<br>  函数和变量类似，也分为全局作用域和函数(局部)作用域<br>  全局作用域：在全局作用域下创建的函数可以在任意位置调用<br>  函数(局部)作用域：在函数(局部)作用域下创建的函数只能在函数内部调用<br>  函数声明提升<br>    和变量一样，JS在程序执行前，把使用function声明的函数提升到最前边。注意，如果函数名和变量名一致，变量会覆盖函数；先提升函数，再提升变量。<br>function fun(){<br>   return 1;<br>}<br>   函数调用  fun()  获取函数的返回值(return后的值)<br>   函数名称  fun   保存的是函数在堆内存中的地址</p>
+<p>4.递归的调用<br> 在函数的内部调用自身<br> 递归要有跳出条件，需要结合return使用。</p>
+<p> 斐波那契数列<br> 1  1  2  3  5  8  13  21  34  55  89  144</p>
+<p>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>     创建函数，传递1个参数，使用递归计算斐波那契数列的第n项是多少<br>  (3)预习JS的对象</p>
 
             </div>
             <hr>
@@ -429,7 +425,7 @@ TypeError">
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/13/报错-jsday06/" class="b-link-green">报错_jsday06</a>
+                    <a href="/2018/12/14/课堂笔记js-day05-1/" class="b-link-green">课堂笔记js_day05</a>
                 </p>
             </div>
         </div>
@@ -449,7 +445,7 @@ TypeError">
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2018/12/14/课堂笔记js-day05-1/">
                     <div class="card-image">
@@ -463,9 +459,9 @@ TypeError">
                 <div class="card-content article-content">
                     <div class="summary">复习while(循环条件){  循环体  }do{ 循环体 }while(循环条件)for(初始值;循环条件;i的变化){  循环体  }break  和  continuevar i=0;var sum=0;do{  i++;  if(i</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -474,6 +470,7 @@ TypeError">
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -482,20 +479,21 @@ TypeError">
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/11/js-day04/">
+                <a href="/2018/12/13/报错-jsday06/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="js_day04">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="报错_jsday06">
                         
-                        <span class="card-title">js_day04</span>
+                        <span class="card-title">报错_jsday06</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习弹出警示框 alert()弹出提示框 var a=prompt()程序执行：顺序执行，选择执行，循环执行if(条件表达式){ 语句； }if(条件表达式){ 语句1; }else{ 语句2; }if(条件表达式1){ 语句1; }els</div>
+                    <div class="summary">console.log(getSum(100));var getSum=function(n){    for (i=1,sum=0;i&lt;=n ;i++ )    {sum+=i;}    return sum;}
+TypeError</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-13
                             </span>
                         <span class="publish-author">
                             
