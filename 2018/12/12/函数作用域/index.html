@@ -5,9 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="报错_jsday06, web前端,blog搭建,基础">
-    <meta name="description" content="console.log(getSum(100));var getSum=function(n){    for (i=1,sum=0;i&amp;lt;=n ;i++ )    {sum+=i;}    return sum;}
-TypeError">
+    <meta name="keywords" content="web前端,blog搭建,基础">
+    <meta name="description" content="//����һvar scope=”global”��function fun(){  console.log(scope);  var scope=”local”��  console.log(scope);}fun();console.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +14,7 @@ TypeError">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>报错_jsday06 | 我的博客</title>
+    <title>我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -246,13 +245,13 @@ TypeError">
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        报错_jsday06
+                        
                     </div>
                 </div>
             </div>
@@ -274,23 +273,19 @@ TypeError">
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-13
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-12
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>console.log(getSum(100));<br>var getSum=function(n){<br>    for (i=1,sum=0;i&lt;=n ;i++ )<br>    {sum+=i;}<br>    return sum;}</p>
-<p>TypeError: getSum is not a function</p>
-<p>正确写法var getSum=function(n){<br>    for (i=1,sum=0;i&lt;=n ;i++ )<br>    {sum+=i;}<br>    return sum;}<br>    console.log(getSum(100));</p>
-<p>创建一个部门对象，（一个部门，一个员工，一条新闻，一个用户，一个订单都是对象）属性有部门编号，名称，员工数量<br>var bm{bid:20,bname:”IT部门”,bcount:20};<br>console.log(bm);<br>创建一个员工对象，属性有编号，姓名，性别，生日，工资，所属部门<br>var yg{yid:2,yname:’李伟’,ysex:1,birthday:1992-12-06,salary:8999,ybm:20};<br>console.log(yg);<br>报错：SyntaxError: Unexpected token ,bm和yg后面没加等号</p>
-<p>var book=new Object();<br>book.’title’=’三国演义’;<br>console.log(book);  //SyntaxError: Unexpected string不希望出现的字符串—-》不能给属性名加引号<br>正确book.title=’三国演义’;</p>
-<p>var car=new Object();<br>car[brand]=’特斯拉’;<br>console.log(car);<br>报错//ReferenceError: brand is not defined,未定义，不加引号默认为一个变量</p>
-<p>var emp={<br>eid:2,<br>    ename:’jones’,<br>    sex:0,<br>    birthday:1997-8-1,//此处要加引号，否则打印是1988<br>    salary:9000,<br>    deptId:20<br>};<br>//获取每一个属性的属性名及其属性值 var key 用于存储每一个属性的名称<br>for(var key in emp){<br>//console.log(key);//eid ename sex birthday salary deptId<br>//console.log(emp[key]);//2 jones 0 1988 9000 20,使用key来获取对应的属性值<br>//console.log(emp.key);//key被当成属性名，undefined<br>console.log(key+’—‘emp[key]);<br>}<br>报错SyntaxError: missing ) after argument list<br>    at createScript (vm.js:80:10)<br>原因：console.log(key+’—‘emp[key]);改为console.log(key+’—‘+emp[key]);</p>
-<p>var emp{<br>eid:3,<br>    ename:’tom’,<br>    esecret:’123456’,<br>    etelphong:’13978964569’,<br>    eemail:<a href="mailto:&#39;1313131313@qq.com" target="_blank" rel="noopener">&#39;1313131313@qq.com</a>‘<br>};<br>for(var key in emp){<br>console.log(key);<br>}<br>报错SyntaxError: Unexpected token {<br>    at createScript (vm.js:80:10)<br>    at Object.runInThisContext (vm.js:139:10)</p>
-<p> 原因var emp{ 改为 var emp={</p>
-<p> //创建对象，添加属性和方法<br>var person={<br>name:’tom’,<br>    sex:’男’,<br>    age:18,<br>    //添加一个说话的方法<br>say:function(){<br>console.log(‘我叫tom’);<br>},<br>    //添加唱歌的方法<br>    song:function(){<br>console.log(‘happy’);<br>}<br>};<br>//调用对象中的方法（函数）<br>person.say();//—&gt;显示我叫tom,若此处换成console.log(person.say());—&gt;报错，显示undefined<br>person.song();<br>// 什么时候必须用console.log才能显示，什么时候不用就会显示</p>
+                <p>//����һ<br>var scope=”global”��<br>function fun(){<br>  console.log(scope);<br>  var scope=”local”��<br>  console.log(scope);<br>}<br>fun();<br>console.log(scope);</p>
+<p>//������<br>var scope=”global”��<br>function fun(){<br>  console.log(scope);<br>  scope=”local”<br>  console.log(scope);<br>}<br>fun();<br>console.log(scope);</p>
+<p>// ������</p>
+<p>function fun(){<br>  var x = y = 1;<br>}<br>fun();<br>console.log(y);<br>console.log(x);</p>
+<p>// ������<br>  var x = 10;<br>  function f1(num){<br>    return num++;<br>  }<br>  var y = f1( x );<br>  console.log(x);<br>  console.log(y);</p>
+<p>//������<br>var x = 10;<br>function f1(num){<br>  num++;<br>}<br>var y = f1(x);<br>console.log(x);<br>console.log(y);</p>
 
             </div>
             <hr>
@@ -429,7 +424,7 @@ TypeError">
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/13/报错-jsday06/" class="b-link-green">报错_jsday06</a>
+                    <a href="/2018/12/12/函数作用域/" class="b-link-green"></a>
                 </p>
             </div>
         </div>
@@ -451,20 +446,21 @@ TypeError">
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/12/14/课堂笔记js-day05-1/">
+                <a href="/2018/12/13/报错-jsday06/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="课堂笔记js_day05">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="报错_jsday06">
                         
-                        <span class="card-title">课堂笔记js_day05</span>
+                        <span class="card-title">报错_jsday06</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习while(循环条件){  循环体  }do{ 循环体 }while(循环条件)for(初始值;循环条件;i的变化){  循环体  }break  和  continuevar i=0;var sum=0;do{  i++;  if(i</div>
+                    <div class="summary">console.log(getSum(100));var getSum=function(n){    for (i=1,sum=0;i&lt;=n ;i++ )    {sum+=i;}    return sum;}
+TypeError</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-14
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-13
                         </span>
                         <span class="publish-author">
                             
@@ -482,20 +478,20 @@ TypeError">
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/12/函数作用域/">
+                <a href="/2018/12/11/js-day04/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="js_day04">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">js_day04</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">//����һvar scope=”global”��function fun(){  console.log(scope);  var scope=”local”��  console.log(scope);}fun();console.</div>
+                    <div class="summary">复习弹出警示框 alert()弹出提示框 var a=prompt()程序执行：顺序执行，选择执行，循环执行if(条件表达式){ 语句； }if(条件表达式){ 语句1; }else{ 语句2; }if(条件表达式1){ 语句1; }els</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-12
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-11
                             </span>
                         <span class="publish-author">
                             
