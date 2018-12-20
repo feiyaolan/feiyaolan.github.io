@@ -5,9 +5,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="课堂笔记js_day06, web前端,blog搭建,基础">
-    <meta name="description" content="复习
-学习一门编程语言的基本步骤(1)了解背景知识：历史、现状、特点、应用场景。(2)搭建开发环境，编写hello world(3)变量和常量(4)数据类型(5)运算符(6)逻辑结构(7)通用小程序(8)函数和对象(9)第三方库、框架(10">
+    <meta name="keywords" content="课堂笔记node.js_setgit_day07, web前端,blog搭建,基础">
+    <meta name="description" content="云服务器的使用 -&amp;gt; 上传自己的代码 -&amp;gt; Git -&amp;gt; 使用Github.com
+1.使用云服务器  自己搭建私有服务器：费用昂贵，技术要求高  租用云服务器：费用划算，维护成本低
+  主流云服务器提供商：AWS、阿里云">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>课堂笔记js_day06 | 我的博客</title>
+    <title>课堂笔记node.js_setgit_day07 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -246,13 +247,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        课堂笔记js_day06
+                        课堂笔记node.js_setgit_day07
                     </div>
                 </div>
             </div>
@@ -274,16 +275,34 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-14
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-20
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>复习</p>
-<p>学习一门编程语言的基本步骤<br>(1)了解背景知识：历史、现状、特点、应用场景。<br>(2)搭建开发环境，编写hello world<br>(3)变量和常量<br>(4)数据类型<br>(5)运算符<br>(6)逻辑结构<br>(7)通用小程序<br>(8)函数和对象<br>(9)第三方库、框架<br>(10)实用的项目</p>
-<p>1.匿名函数<br>  没有名字的函数   function(){    }<br>创建函数——函数声明<br>function  函数名称(){}<br> (1)创建函数——函数表达式<br> var 函数名称=function(形参列表){<br>   函数体<br>   return 返回值;<br> }<br> 调用：函数名称(实参列表)<br> 对比函数声明和函数表达式的区别<br> 函数声明存在函数提升，在任何的位置都可以调用<br> 函数表达式不存在函数提升，必须先创建再调用<br> 练习：使用函数表达式来计算1~100之间的和。<br> (2)匿名函数自调用<br>  创建函数(局部)作用域，防止造成全局污染。<br>  (function(){<br>    函数体//就是局部作用域,创建的变量和函数都是不能被外部访问<br>  })();<br> (3)作为回调函数<br>  把匿名函数作为实参传递给形参，此时的形参就是函数名称<br> function fn(num){<br>    //num就是函数的名称<br>    num();  //调用传递的匿名函数<br> }<br> fn(function(){ … });<br>练习：创建函数add，传递2个参数，2个参数都是以匿名函数的形式传递；在匿名函数中分别返回1个数字。<br>最后在add中计算两个数字相加。<br>2.系统函数(全局函数)<br>  encodeURI   对一个url进行编码<br>  decodeURI   对一个已经编码的url进行解码<br>  parseInt      将数据转为整型<br>  parseFloat    将数据转为浮点型<br>  isNaN  检测一个数据是否为NaN  是-&gt;true 不是-&gt;false<br>  isFinite 检测一个数据是否为有限值，是-&gt;true 不是-&gt;false     1/0 -&gt; Infinity 无限值<br>  eval  执行字符中的表达式  eval(‘1+2’)  -&gt; 3<br> 练习：使用弹出提示框输入一组运算，使用eval执行这组运算。 06_eval.html   06_eval.js<br>3.对象<br> 是一种引用类型的数据，存储在堆内存中。<br> 对象：是一组属性(property)和方法/功能(method)的集合<br> 哪些是对象？<br>  一个手机: 属性有颜色，品牌，尺寸，厚度… 功能有打电话、发短信、照相、聊天、游戏….<br>  一辆汽车：属性有品牌、外观、车型… 功能有代步、撞人、拉货、取暖、乘凉…<br> (1)JS中的对象<br>  内置对象：JS提供的<br>  宿主对象：根据不同的执行环境来划分<br>  自定义对象：自己创建的对象<br> (2)创建自定义对象<br>  ①对象字面量(直接量)<br>  ②内置构造函数<br>  ③自定义构造函数<br>4.使用对象字面量创建对象<br>  使用大括号{ }创建空对象<br>  属性名和属性值之间用冒号隔开<br>  多组属性之间用逗号隔开<br>  属性名中引号可加可不加，如果出现特殊字符，必须添加引号<br> var phone={ color:’red’, ‘made-in’:’china’ };<br> 练习：创建一个部门对象，属性有部门编号，名称，员工数量<br> 练习：创建一个员工对象，属性有编号，姓名，性别，生日，工资，所在部门<br>5.使用内置构造函数创建对象<br>var book=new Object();  //创建一个空对象<br>book.id=103;  //添加属性，属性名不能添加引号<br>book[‘titlte’]=’三国演义’; //添加属性，属性名必须加引号；如果不加引号，会被认为是变量.<br> 练习：创建一个汽车对象，属性有编号，品牌，颜色，价格<br> 练习：创建一个电脑对象，属性有型号，品牌，尺寸，产地<br>6.访问对象中的属性<br> (1)获取属性值<br>  emp.eid<br>  emp[‘ename’]<br> 如果要获取的属性名不存在，返回undefined<br> (2)遍历对象中的属性(for-in)<br>  获取对象中每一个属性名，进而获取属性值<br> for(var key in emp){<br>   //emp 要遍历的对象<br>   //key 要遍历的每一个属性名<br>   //emp[key]  通过属性名获取对应的属性值<br> }<br> 注意：for-in不能遍历预定义(JS默认为每一个对象添加的)属性。<br>练习：创建一个商品对象，包含编号，标题，价格，是否在售(isOnsale)，商品库存量(stockCount)，使用for-in遍历所有的属性。<br>7.检测对象中是否含有某个属性<br>  ‘属性名’  in  对象  // true-&gt;存在  false-&gt;不存在<br>  对象.hasOwnProperty(‘属性名’) //true-&gt;存在 false-&gt;不存在<br>  对象.属性名=== undefined //true-&gt;不存在  false-&gt;存在<br>8.对象中的方法<br> var person={<br>   name: ‘tom’,<br>   say: function(){<br>      this.name  //this指代当前的对象<br>   }<br> }<br> person.say(); //调用对象中的方法<br>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>     创建一个圆对象，添加属性半径，圆周率；添加方法计算周长(getLength)和计算面积(getArea)；分别返回圆的周长和面积<br>  (3)预习JS中的数组</p>
+                <p>云服务器的使用 -&gt; 上传自己的代码 -&gt; Git -&gt; 使用Github.com</p>
+<p>1.使用云服务器<br>  自己搭建私有服务器：费用昂贵，技术要求高<br>  租用云服务器：费用划算，维护成本低</p>
+<p>  主流云服务器提供商：AWS、阿里云、新浪云</p>
+<p>2.使用新浪云服务器<br>  (1)注册新浪微博账号<br>    官网：weibo.com<br>  (2)使用新浪微博绑定新浪云账号<br>    官网：sae.sina.com.cn</p>
+<pre><code>注意：新浪云中的“安全邮箱”和“安全密码”用于管理代码，与微博账号名和密码可以不同。
+</code></pre><p>  (3)登录新浪云开通云应用，获得免费三级域名<br>    官网：sae.sina.com.cn</p>
+<p>  (4)管理云应用，上传自己的代码<br>    如果创建的是PHP服务器，直接在版本库中上传代码文件即可；</p>
+<pre><code>如果创建的是Node.js服务器，需要使用Git客户端上传代码；
+</code></pre><hr>
+<p>  (5)客户端访问测试</p>
+<p>扩展知识：<br>一级域名：.com、.cn   无法购买<br>二级域名：jd.com、tmooc.cn   可以购买，万网(<a href="http://www.net.cn" target="_blank" rel="noopener">www.net.cn</a>)<br>三级域名：mail.jd.com、ftp.jd.com  无需购买</p>
+<p>3.在新浪云应用中使用数据库<br>  控制台 -&gt; 数据库与缓存服务 -&gt; 共享型MySQL</p>
+<p>  提示：(1)共享型MySQL中每个用户有且只有一个默认数据库，不允许删除或者创建新的库，即禁用CREATE DATABASE / DROP DATABASE！ (2) 共享型MySQL服务器的主机地址、端口、用户名、密码与上课都不一样，新浪云提供了一套常量！——注意查看手册</p>
+<p>Version：版本 —— 每一次大的功能更新<br>Revision：修订版、版本 —— 每一次的修改提交</p>
+<p>4.使用Git来维护代码——重点&amp;难点<br>  版本管理软件：用于记录软件的开发过程，实现团队成员间的协作。实现代码的每一次提交人、提交时间、提交内容 —— 每一次提交称为一个版本。最终实现代码的存储、共享、合并、追踪、回退等功能。<br>  常见的版本管理软件：CVS、SVN(Subversion)、Git<br>简单的Git教程：<br><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a><br>版本管理软件的基本概念：<br>(1)Repository/Repo：仓库，一个项目所涉及到所有文件以及每个文件的创建修改过程，称为仓库，即 仓库 = 文件 + 历史<br>(2)Commit：提交，每一次修改保存入仓库，称为提交<br>(3)Workspace：工作区，程序员修改代码的地方，就是一个目录<br>(4)Stage/Cache：缓存区/暂存区/舞台，用于临时存储项目修改的内<br>存区域<br>(5)Clone：克隆，将远程Git仓库(文件+历史)复制一份到本地——第一次<br>(6)Push：推送，将本地仓库(文件+历史)复制到远程仓库<br>(7)Pull：拉取，将远程Git仓库(文件+历史)的最新修改更新到本地</p>
+<p>Git常用命令：<br>(1)git config：配置Git的使用特性<br>    git  config  –global  user.name  ‘LiWenhua’<br>    git  config  –global  user.email  <a href="mailto:&#39;liwenhua@tedu.cn" target="_blank" rel="noopener">&#39;liwenhua@tedu.cn</a>‘<br>(2)git init：把当前目录初始化为一个Git仓库——整个项目的第一个仓库，其它同事都克隆此仓库即可<br>(3)git status：查看当前工作区/暂存区状态，有没有修改/增加/删除<br>(4)git add：把工作区中的修改添加到暂存区<br>    git  add  文件名            添加指定文件的修改<br>    git  add  .                添加所有修改<br>(5)git commit：把暂存区中的修改提交到仓库中，生成一个新的版本<br>    git  commit  -m   ‘提交的原因说明’<br>  提示：若没有提供-m以及原因说明，会自动进入vi编辑器，让用户输入。<br>(6)git log：查看仓库中的提交日志（谁+时间+提交了什么）</p>
+<p>练习：修改index.html中的内容，查看状态；添加到暂存区，最后提交到仓库。再次查看状态。<br>删除css/index.css文件，查看状态；添加到暂存区，最后提交到仓库。再次查看状态。<br>修改index.html中的已有内容，后面再追加两行内容，查看状态；添加到暂存区，最后提交到仓库。再次查看状态。查看仓库的提交历史。</p>
+<p>5.使用Git来维护新浪云中的代码<br>  说明：每个新浪云中的云应用都对应一个Git仓库，可以克隆到本地，修改提交，最后推送本地仓库中的最新内容到远程仓库<br>  (1)克隆云仓库到本地<br>    git  clone  云仓库的URL地址<br>  (2)在本地工作区中修改项目文件<br>  (3)从本地工作区添加修改到暂存区<br>    git  add  .<br>  (4)从本地暂存区提交到本地仓库中<br>    git  commit   -m  “原因说明”<br>  (5)将本地仓库中最新历史推送到云仓库<br>    git  push   云仓库的URL地址</p>
+<p>练习：把自己的新浪云仓库克隆到另一个目录下，修改index.html，添加两个img元素，同时在本地仓库添加这两个图片文++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++件，添加/提交到本地仓库，推送到云仓库。</p>
+<p>fatal： Authentication Error ….</p>
+<p>17600025724<br><a href="mailto:1160126628@qq.com" target="_blank" rel="noopener">1160126628@qq.com</a></p>
 
             </div>
             <hr>
@@ -422,7 +441,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/14/课堂笔记js-day06/" class="b-link-green">课堂笔记js_day06</a>
+                    <a href="/2018/12/20/课堂笔记node-js-setgit-day07/" class="b-link-green">课堂笔记node.js_setgit_day07</a>
                 </p>
             </div>
         </div>
@@ -442,23 +461,25 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
-                <a href="/2018/12/20/课堂笔记js-day07/">
+                <a href="/2018/12/20/课堂笔记node-js-setgit-day07/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="课堂笔记js_day07">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="课堂笔记node.js_setgit_day07">
                         
-                        <span class="card-title">课堂笔记js_day07</span>
+                        <span class="card-title">课堂笔记node.js_setgit_day07</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习匿名函数  function(){   }函数声明  function fn(){    }创建函数——函数表达式   var fn=function(a,b){ return a+b; }匿名函数自调用 (function(){   </div>
+                    <div class="summary">云服务器的使用 -&gt; 上传自己的代码 -&gt; Git -&gt; 使用Github.com
+1.使用云服务器  自己搭建私有服务器：费用昂贵，技术要求高  租用云服务器：费用划算，维护成本低
+  主流云服务器提供商：AWS、阿里云</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -467,6 +488,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -475,20 +497,20 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/14/课堂笔记js-day05-1/">
+                <a href="/2018/12/20/课堂笔记node-js-day06/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="课堂笔记js_day05">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="课堂笔记node.js_day06">
                         
-                        <span class="card-title">课堂笔记js_day05</span>
+                        <span class="card-title">课堂笔记node.js_day06</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习while(循环条件){  循环体  }do{ 循环体 }while(循环条件)for(初始值;循环条件;i的变化){  循环体  }break  和  continuevar i=0;var sum=0;do{  i++;  if(i</div>
+                    <div class="summary">复习第三方中间件body¬-parser中间件给服务器使用，所有的post请求自动将数据转为对象server.use(bodyParser.urlencoded({  extended:false}));mysql模块普通 var conn</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-14
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
                             </span>
                         <span class="publish-author">
                             
