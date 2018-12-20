@@ -5,9 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="课堂笔记js_day06, web前端,blog搭建,基础">
-    <meta name="description" content="复习
-学习一门编程语言的基本步骤(1)了解背景知识：历史、现状、特点、应用场景。(2)搭建开发环境，编写hello world(3)变量和常量(4)数据类型(5)运算符(6)逻辑结构(7)通用小程序(8)函数和对象(9)第三方库、框架(10">
+    <meta name="keywords" content="课堂笔记node.js_day03, web前端,blog搭建,基础">
+    <meta name="description" content="复习  模块分类    以路径开头    不以路径开头文件模块    require(‘./circle.js’)自定义模块    require(‘url’)核心模块目录模块    require(‘./mydir’)自动寻找index.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>课堂笔记js_day06 | 我的博客</title>
+    <title>课堂笔记node.js_day03 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -246,13 +245,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        课堂笔记js_day06
+                        课堂笔记node.js_day03
                     </div>
                 </div>
             </div>
@@ -274,16 +273,16 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-14
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-20
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>复习</p>
-<p>学习一门编程语言的基本步骤<br>(1)了解背景知识：历史、现状、特点、应用场景。<br>(2)搭建开发环境，编写hello world<br>(3)变量和常量<br>(4)数据类型<br>(5)运算符<br>(6)逻辑结构<br>(7)通用小程序<br>(8)函数和对象<br>(9)第三方库、框架<br>(10)实用的项目</p>
-<p>1.匿名函数<br>  没有名字的函数   function(){    }<br>创建函数——函数声明<br>function  函数名称(){}<br> (1)创建函数——函数表达式<br> var 函数名称=function(形参列表){<br>   函数体<br>   return 返回值;<br> }<br> 调用：函数名称(实参列表)<br> 对比函数声明和函数表达式的区别<br> 函数声明存在函数提升，在任何的位置都可以调用<br> 函数表达式不存在函数提升，必须先创建再调用<br> 练习：使用函数表达式来计算1~100之间的和。<br> (2)匿名函数自调用<br>  创建函数(局部)作用域，防止造成全局污染。<br>  (function(){<br>    函数体//就是局部作用域,创建的变量和函数都是不能被外部访问<br>  })();<br> (3)作为回调函数<br>  把匿名函数作为实参传递给形参，此时的形参就是函数名称<br> function fn(num){<br>    //num就是函数的名称<br>    num();  //调用传递的匿名函数<br> }<br> fn(function(){ … });<br>练习：创建函数add，传递2个参数，2个参数都是以匿名函数的形式传递；在匿名函数中分别返回1个数字。<br>最后在add中计算两个数字相加。<br>2.系统函数(全局函数)<br>  encodeURI   对一个url进行编码<br>  decodeURI   对一个已经编码的url进行解码<br>  parseInt      将数据转为整型<br>  parseFloat    将数据转为浮点型<br>  isNaN  检测一个数据是否为NaN  是-&gt;true 不是-&gt;false<br>  isFinite 检测一个数据是否为有限值，是-&gt;true 不是-&gt;false     1/0 -&gt; Infinity 无限值<br>  eval  执行字符中的表达式  eval(‘1+2’)  -&gt; 3<br> 练习：使用弹出提示框输入一组运算，使用eval执行这组运算。 06_eval.html   06_eval.js<br>3.对象<br> 是一种引用类型的数据，存储在堆内存中。<br> 对象：是一组属性(property)和方法/功能(method)的集合<br> 哪些是对象？<br>  一个手机: 属性有颜色，品牌，尺寸，厚度… 功能有打电话、发短信、照相、聊天、游戏….<br>  一辆汽车：属性有品牌、外观、车型… 功能有代步、撞人、拉货、取暖、乘凉…<br> (1)JS中的对象<br>  内置对象：JS提供的<br>  宿主对象：根据不同的执行环境来划分<br>  自定义对象：自己创建的对象<br> (2)创建自定义对象<br>  ①对象字面量(直接量)<br>  ②内置构造函数<br>  ③自定义构造函数<br>4.使用对象字面量创建对象<br>  使用大括号{ }创建空对象<br>  属性名和属性值之间用冒号隔开<br>  多组属性之间用逗号隔开<br>  属性名中引号可加可不加，如果出现特殊字符，必须添加引号<br> var phone={ color:’red’, ‘made-in’:’china’ };<br> 练习：创建一个部门对象，属性有部门编号，名称，员工数量<br> 练习：创建一个员工对象，属性有编号，姓名，性别，生日，工资，所在部门<br>5.使用内置构造函数创建对象<br>var book=new Object();  //创建一个空对象<br>book.id=103;  //添加属性，属性名不能添加引号<br>book[‘titlte’]=’三国演义’; //添加属性，属性名必须加引号；如果不加引号，会被认为是变量.<br> 练习：创建一个汽车对象，属性有编号，品牌，颜色，价格<br> 练习：创建一个电脑对象，属性有型号，品牌，尺寸，产地<br>6.访问对象中的属性<br> (1)获取属性值<br>  emp.eid<br>  emp[‘ename’]<br> 如果要获取的属性名不存在，返回undefined<br> (2)遍历对象中的属性(for-in)<br>  获取对象中每一个属性名，进而获取属性值<br> for(var key in emp){<br>   //emp 要遍历的对象<br>   //key 要遍历的每一个属性名<br>   //emp[key]  通过属性名获取对应的属性值<br> }<br> 注意：for-in不能遍历预定义(JS默认为每一个对象添加的)属性。<br>练习：创建一个商品对象，包含编号，标题，价格，是否在售(isOnsale)，商品库存量(stockCount)，使用for-in遍历所有的属性。<br>7.检测对象中是否含有某个属性<br>  ‘属性名’  in  对象  // true-&gt;存在  false-&gt;不存在<br>  对象.hasOwnProperty(‘属性名’) //true-&gt;存在 false-&gt;不存在<br>  对象.属性名=== undefined //true-&gt;不存在  false-&gt;存在<br>8.对象中的方法<br> var person={<br>   name: ‘tom’,<br>   say: function(){<br>      this.name  //this指代当前的对象<br>   }<br> }<br> person.say(); //调用对象中的方法<br>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>     创建一个圆对象，添加属性半径，圆周率；添加方法计算周长(getLength)和计算面积(getArea)；分别返回圆的周长和面积<br>  (3)预习JS中的数组</p>
+                <p>复习<br>  模块分类<br>    以路径开头    不以路径开头<br>文件模块    require(‘./circle.js’)<br>自定义模块    require(‘url’)<br>核心模块<br>目录模块    require(‘./mydir’)<br>自动寻找index.js文件<br>package.json文件寻找main属性对应的文件    require(‘mysql’);<br>到node_modules中寻找目录名称为mysql的目录<br>npm  install  包名称;<br>querystring   parse()  stringify()<br>url  parse()  format()<br>      protocol  hostname   port  pathname  query<br>fs  fs.stat/fs.statSync  fs.mkdir/mkdirSync<br>    rmdir/rmdirSync  readdir/readdirSync<br>    readdir(path, callback)   var res=readdir(path)<br>    writeFile(path,data,callback)</p>
+<p>1.文件系统模块——fs<br> ①fs.unlink(path,callback)/fs.unlinkSync(path)  删除文件<br> ②fs.existsSync(path)  判断文件是否存储<br>      存在true 不存在false<br>  练习：判断文件num.txt是否存在，如果不存在则创建，并初始化数字0；在原来的数字上加1。<br> ③fs.readFile(path,callback)/fs.readFileSync(path) 读取文件<br>   返回的数据是buffer形式。<br> ④fs.appendFile(path,data,callback)<br>   fs.appendFileSync(path,data)<br>  追加写入，如果文件不存在则创建文件，如果文件已经存在，则在末尾写入数据。<br> 练习：使用文件操作来创建文件user.txt，每次写入一个对象,<br>      {uid:1, uname:’tom’, upwd: ‘123456’}<br>2.http协议<br>  是浏览器和web服务器之间的通信协议。<br>  (1)通用头信息<br>    Request URL: 请求的URL，要向服务端请求哪个文件。<br>    Request Method: 请求的方法  get/post<br>    Status Code: 响应的状态码<br>       2<strong>  服务器成功的响应<br>       3</strong>  响应的重定向，跳转到另一个网址<br>       4<strong>  客户端错误<br>       5</strong>  服务器端错误<br>    Romote Address: 请求的远程服务器的IP地址和端口<br>  (2)响应头信息<br>    Connection: keep-alive；连接的方式：持续连接<br>    Content-Type: text/html; 响应的文件类型<br>    Content-Encoding: 响应的文件压缩形式<br>    Transfer-Encoding:响应时的传输方式，chunked(分段传输)<br>    Location: 响应时跳转的URL，通常结合着300系列状态码。<br>  (3)请求头信息<br>    Accept: 客户端接受的文件类型有哪些<br>    Accept-Encoding: 客户端接受的文件压缩形式<br>    Accept-Language: 客户端接受的语言类型<br>    Connection: 客户端和服务器的连接方式，持续连接<br>  (4)请求主体<br>    可有可无，客户端向服务器端传递数据<br>3.http模块<br> 可以模拟浏览器向服务器端发请求，也可以创建web服务器<br> (1)模拟浏览器<br>   http.get(url, callback)<br>     get 请求的方法<br>     url  请求的网址<br>     callback  回调函数，用来获取服务器端的响应<br>       res 响应的对象<br>       res.statusCode  获取响应的状态码<br>       res.on(‘data’, (buf)=&gt;{   })<br>        使用事件来获取服务器端响应的数据<br>        buf是服务器端响应的数据，格式为buffer数据。<br> (2)创建web服务器<br>   var server=http.createServer()  创建web服务器<br>   server.listen(3000) 分配端口，监听3000端口的变化<br>   server.on(‘request’, (req,res)=&gt;{  });<br>   //接收浏览器的请求，是一个事件，一旦有请求，自动执行<br>   req  请求的对象<br>     url  请求的路径，显示端口后的部分<br>    method 请求的方法，直接通过地址栏默认使用get方法<br>     headers  请求的头信息<br>   练习：创建web服务器，监听3001端口，使用事件监听浏览器的请求，打印请求的方法、URL；<br>    <a href="http://127.0.0.1:3001/admin/login.html" target="_blank" rel="noopener">http://127.0.0.1:3001/admin/login.html</a><br>    <a href="http://localhost:3001/member/shopping.html" target="_blank" rel="noopener">http://localhost:3001/member/shopping.html</a><br>    05_server.js<br>   res  响应的对象<br>     write()   响应的内容为文本形式，向浏览器中写入文本。<br>     writeHead( 302,{  } )  设置响应的状态码和响应的头信息；如果要跳转需要设置 Location属性。<br>     end()  响应结束<br>  练习：创建web服务器，监听3000端口；接收浏览器端的请求； 06_server.js<br>     /login      响应文本  this  is  login  page<br>     /member   响应文本  this  is  member  page<br>     /          跳转到  /member<br>  如果以上都没有匹配的， 响应文本  404  not  found</p>
+<p>3.express框架<br>  基于NODEJS，用于构建web服务器的框架<br>  官网：<a href="http://www.expressjs.com.cn" target="_blank" rel="noopener">www.expressjs.com.cn</a><br>  安装：npm install express<br> const express=require(‘express’);<br> var server=express();<br> server.listen(3000);<br> (1)路由<br>   浏览器向web服务器发来请求，web服务器要根据请求的方法和请求的URL来作出响应。<br>   路由三要素：请求的方法、请求的URL、响应的内容<br>    响应的对象(res)<br>     res.send()  响应文本，只能响应一次send；如果是数字认为是状态码。<br>     res.sendFile() 响应文件，必须使用绝对路径(__dirname)<br>     res.redirect()  响应的重定向<br>课后任务<br>  (1)复习今天内容，整理思维导图<br>  (2)练习<br>    使用express创建web服务器，创建以下路由<br>     get   ‘/index’     发送文本”这是首页”<br>     get   ‘/login’     发送文件 “login.html”<br>     post  ‘/register’   发送文本”注册成功”<br>     get   ‘/‘          跳转到  /index<br>  (3)预习express的中间件，浏览器向服务器传递数据方式有哪些(post，查询字符串，路由传递)</p>
 
             </div>
             <hr>
@@ -422,7 +421,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/14/课堂笔记js-day06/" class="b-link-green">课堂笔记js_day06</a>
+                    <a href="/2018/12/20/课堂笔记node-js-day03/" class="b-link-green">课堂笔记node.js_day03</a>
                 </p>
             </div>
         </div>
@@ -442,23 +441,23 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
-                <a href="/2018/12/20/课堂笔记js-day07/">
+                <a href="/2018/12/20/课堂笔记node-js-day03/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="课堂笔记js_day07">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="课堂笔记node.js_day03">
                         
-                        <span class="card-title">课堂笔记js_day07</span>
+                        <span class="card-title">课堂笔记node.js_day03</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习匿名函数  function(){   }函数声明  function fn(){    }创建函数——函数表达式   var fn=function(a,b){ return a+b; }匿名函数自调用 (function(){   </div>
+                    <div class="summary">复习  模块分类    以路径开头    不以路径开头文件模块    require(‘./circle.js’)自定义模块    require(‘url’)核心模块目录模块    require(‘./mydir’)自动寻找index.</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -467,6 +466,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -475,20 +475,21 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/14/课堂笔记js-day05-1/">
+                <a href="/2018/12/20/面试题/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="课堂笔记js_day05">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="面试题">
                         
-                        <span class="card-title">课堂笔记js_day05</span>
+                        <span class="card-title">面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习while(循环条件){  循环体  }do{ 循环体 }while(循环条件)for(初始值;循环条件;i的变化){  循环体  }break  和  continuevar i=0;var sum=0;do{  i++;  if(i</div>
+                    <div class="summary">变量？内存中存储数据的一片空间变量的分类？—全局变量1，var在全局的变量  2，非严格模式下不带var的变量 eg: a=1;由程序自动声明一个变量放在当前作用域前—局部变量   1，声明在局部作用域 2，函数的形参
+赋值操作的返回值就是</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-14
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
                             </span>
                         <span class="publish-author">
                             
