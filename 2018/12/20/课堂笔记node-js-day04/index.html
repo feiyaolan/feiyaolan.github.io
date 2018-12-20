@@ -5,8 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="web前端,blog搭建,基础">
-    <meta name="description" content="//����һvar scope=”global”��function fun(){  console.log(scope);  var scope=”local”��  console.log(scope);}fun();console.">
+    <meta name="keywords" content="课堂笔记node.js_day04, web前端,blog搭建,基础">
+    <meta name="description" content="复习fs模块stat/mkdir/rmdir/readdir/writeFile/appendFile/readFile/unlink/existsSynchttp协议  通用头信息  请求头信息  响应头信息  请求的主体http模块  ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>我的博客</title>
+    <title>课堂笔记node.js_day04 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -245,13 +245,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        
+                        课堂笔记node.js_day04
                     </div>
                 </div>
             </div>
@@ -273,19 +273,18 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-12
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-20
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>//����һ<br>var scope=”global”��<br>function fun(){<br>  console.log(scope);<br>  var scope=”local”��<br>  console.log(scope);<br>}<br>fun();<br>console.log(scope);</p>
-<p>//������<br>var scope=”global”��<br>function fun(){<br>  console.log(scope);<br>  scope=”local”<br>  console.log(scope);<br>}<br>fun();<br>console.log(scope);</p>
-<p>// ������</p>
-<p>function fun(){<br>  var x = y = 1;<br>}<br>fun();<br>console.log(y);<br>console.log(x);</p>
-<p>// ������<br>  var x = 10;<br>  function f1(num){<br>    return num++;<br>  }<br>  var y = f1( x );<br>  console.log(x);<br>  console.log(y);</p>
-<p>//������<br>var x = 10;<br>function f1(num){<br>  num++;<br>}<br>var y = f1(x);<br>console.log(x);<br>console.log(y);</p>
+                <p>复习<br>fs模块<br>stat/mkdir/rmdir/readdir/writeFile/appendFile/readFile/<br>unlink/existsSync<br>http协议<br>  通用头信息  请求头信息  响应头信息  请求的主体<br>http模块<br>  http.get(url,(res)=&gt;{<br>    statusCode<br>    res.on(‘data’, (buf)=&gt;{   })<br>  })<br>web服务器<br>  var server=http.createServer()<br>  server.listen(3000)<br>  server.on(‘request’, (req,res)=&gt;{<br>     req url/method/headers<br>     res write/writeHead(302,{ Location:’/detail’ })/end()<br>  })<br>express框架<br> 创建web服务器<br>    var server=express()<br>    server.listen(3000);<br> 创建路由<br>    server.get(‘/login’, (req,res)=&gt;{<br>       res.send()/sendFile(__dirname+’/login.html’)/redirect(‘’)<br>    });<br>1.路由中的请求对象<br>  req.method   获取请求的方法<br>  req.url  获取请求的URL<br>  req.headers  获取请求的头信息<br>  req.query  获取请求时以查询字符串形式传递的数据，返回格式为对象。<br>  练习：创建文件03_post.js，创建web服务器，新建路由(get  /reg)，响应一个注册文件(reg.html)<br>2.post和get请求<br>  get请求以查询字符串的形式传递数据，服务器端使用 req.query获取数据，结果是对象<br>  post请求是通过表单提交(现阶段)的方式传递数据，服务器端通过事件形式获取数据(后期会有简单的方法)<br> req.on(‘data’, (buf)=&gt;{<br>  获取的结果是buffer数据，需要使用查询字符串解析为对象<br> })<br>3.使用路由传递数据——路由传参<br> 设置路由中接收的名称<br>server.get(‘/detail/:lid’,(req,res)=&gt;{<br>  req.params  //获取路由传递的数据，格式为对象<br>})<br>浏览器请求方式<br> <a href="http://127.0.0.1/detail/5" target="_blank" rel="noopener">http://127.0.0.1/detail/5</a><br> 5就是传递的数据，使用lid来接收<br>练习：创建购物车的路由，请求的URL：/shopping，请求的方法get，传递商品的价格(price)和名称(pname)。</p>
+<p>用户模块<br>  用户列表   /list    详情  /detail    删除   /delete<br>    /user/list          /user/detail     /user/delete<br>商品模块<br>  商品列表   /list    详情  /detail    删除 /delete<br>    /product/list   /product/detail  /product/delete<br>4.路由器<br>  路由在使用过程中，不同的模块可能出现相同的URL，把同一个模块下的路由挂载到特定的前缀。<br>  例如：商品模块下的路由挂载到/product，访问形式/product/list，用户模块下的路由挂载到/user，访问形式/user/list<br>  路由器就是一个js文件，把同一模块下的路由放到一起。<br> const express=require(‘express’);<br> var router=express.Router(); //创建空的路由器对象<br> router.get(‘/list’, (req,res)=&gt;{ }); //往路由器中添加路由<br> module.exports=router;<br> 在web服务器下使用路由器<br>const userRouter=require(‘./user.js’); //引用路由器模块<br>server.use(‘/user’, userRouter);//把路由器挂载到/user下，访问形式  /user/list<br> 练习：创建商品模块路由器(product.js)，添加路由商品列表(list)、商品删除(delete)、商品添加(add)，在web服务器引入，并挂载到/product<br>5.中间件</p>
+<p>  中间件的作用为主要的业务逻辑所服务。<br>分为5个<br> 应用级中间件、路由级中间件、内置中间件、第三方中间件、错误级中间件<br>(1)应用级中间件<br>  每一个中间件就是一个函数，需要配合其他的中间件或者路由使用。<br>  server.use(回调函数)   拦截所有的路由<br>  server.use(‘/detail’, 回调函数)   拦截特定的路由<br>  练习：创建路由(get，/view)响应当前的浏览次数，每次请求，响应的次数加1。<br>   在函数外初始化一个变量，设置值为0; 在中间件中实现变量加1，在路由中响应变量。<br> (2)路由级中间件<br>   用于在服务器中将路由器挂载到特定的URL<br>   server.use(‘/user’, userRouter);<br> (3)内置中间件<br>   在express中只有一个内置的中间件<br>   server.use( express.static(‘要托管的目录’) )<br>   托管静态资源到某一个目录，如果浏览器端要请求静态资源，则自动到这个目录下查找。<br>   静态资源：html、css、客户端js、图像…<br>   练习：将静态资源托管到files目录下，查看如果两个静态目录下有相同名称的文件，显示哪一个？</p>
+<p>课后任务<br>  (1)复习今天内容，复习MySQL中的SQL语句<br>  (2)练习：<br>    创建web服务器，托管静态文件（如下图），点击查询，服务器端获取输入的身份证号(中间件)，截取出生的年月日和性别；在路由中响应给浏览器。</p>
+<p>  (3)预习mysql模块的使用<br>   <a href="https://www.npmjs.com/package/mysql" target="_blank" rel="noopener">https://www.npmjs.com/package/mysql</a></p>
 
             </div>
             <hr>
@@ -424,7 +423,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/12/函数作用域/" class="b-link-green"></a>
+                    <a href="/2018/12/20/课堂笔记node-js-day04/" class="b-link-green">课堂笔记node.js_day04</a>
                 </p>
             </div>
         </div>
@@ -444,24 +443,23 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
-                <a href="/2018/12/13/报错-jsday06/">
+                <a href="/2018/12/20/课堂笔记node-js-day04/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="报错_jsday06">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="课堂笔记node.js_day04">
                         
-                        <span class="card-title">报错_jsday06</span>
+                        <span class="card-title">课堂笔记node.js_day04</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">console.log(getSum(100));var getSum=function(n){    for (i=1,sum=0;i&lt;=n ;i++ )    {sum+=i;}    return sum;}
-TypeError</div>
+                    <div class="summary">复习fs模块stat/mkdir/rmdir/readdir/writeFile/appendFile/readFile/unlink/existsSynchttp协议  通用头信息  请求头信息  响应头信息  请求的主体http模块  </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -470,6 +468,7 @@ TypeError</div>
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -478,20 +477,20 @@ TypeError</div>
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/11/js-day04/">
+                <a href="/2018/12/20/课堂笔记node-js-day03/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="js_day04">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="课堂笔记node.js_day03">
                         
-                        <span class="card-title">js_day04</span>
+                        <span class="card-title">课堂笔记node.js_day03</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习弹出警示框 alert()弹出提示框 var a=prompt()程序执行：顺序执行，选择执行，循环执行if(条件表达式){ 语句； }if(条件表达式){ 语句1; }else{ 语句2; }if(条件表达式1){ 语句1; }els</div>
+                    <div class="summary">复习  模块分类    以路径开头    不以路径开头文件模块    require(‘./circle.js’)自定义模块    require(‘url’)核心模块目录模块    require(‘./mydir’)自动寻找index.</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
                             </span>
                         <span class="publish-author">
                             
