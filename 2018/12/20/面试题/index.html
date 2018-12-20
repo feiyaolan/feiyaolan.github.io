@@ -5,8 +5,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="课堂笔记nodejs_day02, web前端,blog搭建,基础">
-    <meta name="description" content="复习  ES6  函数中的参数  function add(a,b=2){   }   模板字符串 abc ${ename}  错误处理  语法错误，引用错误，类型错误，范围错误     try{   }catch(err){  }  no">
+    <meta name="keywords" content="面试题, web前端,blog搭建,基础">
+    <meta name="description" content="变量？内存中存储数据的一片空间变量的分类？—全局变量1，var在全局的变量  2，非严格模式下不带var的变量 eg: a=1;由程序自动声明一个变量放在当前作用域前—局部变量   1，声明在局部作用域 2，函数的形参
+赋值操作的返回值就是">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>课堂笔记nodejs_day02 | 我的博客</title>
+    <title>面试题 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -245,13 +246,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        课堂笔记nodejs_day02
+                        面试题
                     </div>
                 </div>
             </div>
@@ -280,11 +281,18 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>复习<br>  ES6  函数中的参数  function add(a,b=2){   }<br>   模板字符串 <code>abc ${ename}</code><br>  错误处理  语法错误，引用错误，类型错误，范围错误<br>     try{   }catch(err){  }<br>  nodejs全局对象  global   JS  window<br>  console.log/info/warn/error/time/timeEnd<br>  process.arch/platform/env/version/pid/kill<br>  Buffer.alloc(5, ‘abcde’)     toString()<br>  模块系统<br>   每一个文件就是一个模块，文件中的函数和变量都不能被直接使用<br>   (function(exports,require,module,<strong>filename,</strong>dirname){<br>      程序员写的代码<br>   })<br>1.模块<br>    以路径开头    不以路径开头<br>文件模块    require(‘./circle.js’)<br>常用于用户自定义模块，如果后缀名是js是可以省略的    require(‘url’)<br>常用于引入官方提供的核心模块<br>目录模块    require(‘./02_2’)<br>会在当前目录下的02_2中寻找package.json文件中的main属性对应的值，如果不存在该文件，则自动寻找index.js    require(‘04_2’)<br>要求引入的目录出现在node_modules中，如果找不到，则会到上一级目录查找，直到顶层。常用于第三方模块。<br>练习：创建模块03_1.js，引入当前目录下的03_2目录模块，在03_2下创建my.js，在该文件下导出一个方法fn(两个数字相加)，在03_1.js中引入后调用该方法。<br>练习：创建模块05_1.js引入不带路径的目录模块05_2，05_2目录中含有hello.js文件(随便打印些内容)</p>
-<p>2.第三方模块(包)<br>  自动下载地址  <a href="http://www.npmjs.com" target="_blank" rel="noopener">http://www.npmjs.com</a><br>  需要已经安装好了npm，随着nodejs一起安装。<br>  切换到要下载的目录<br>    (1)cd  完整的目录    回车<br>        change  directory<br>    (2)在要下载的目录空白区域，按住shift，单击右键-&gt;在此处打开powershell窗口<br>  使用npm安装<br>    npm  install  包的名称<br>3.核心模块<br>  是NODEJS官方提供的模块，可以直接引入，不需要创建。<br> (1)查询字符串模块——querystring<br>  查询字符串：浏览器向服务器发送请求，传递数据的一种方式<br>    协议，域名(IP)，端口<br>  <a href="http://www.codeboy.com:80/product_details.html?lid=5&amp;name=dell" target="_blank" rel="noopener">http://www.codeboy.com:80/product_details.html?lid=5&amp;name=dell</a><br>   parse()   将查询字符串解析为对象<br>   stringify()  将对象转为查询字符串<br>  练习：把百度搜索时的查询字符串解析为对象，获取关键字<br>   ie=utf-8&amp;f=8&amp;rsv_bp=0&amp;rsv_idx=1&amp;tn=baidu&amp;wd=电脑<br> (2)url模块——url<br>   parse()  将URL解析为对象<br>      protocol  协议<br>      hostname  主机(域名/ip地址)<br>      port  端口<br>      pathname  文件在服务器上的路径<br>      query  查询字符串<br>  format()  将对象转换成url<br>     query属性对应的是对象格式<br>练习：创建文件08_exercise.js，浏览器请求的url为<br> <a href="https://www.tmooc.cn:3000/course/web.html?cname=js&amp;price=5000" target="_blank" rel="noopener">https://www.tmooc.cn:3000/course/web.html?cname=js&amp;price=5000</a> 服务器端获取传递的数据cname和price</p>
-<p>4.全局函数<br>  parseInt/parseFloat/encodeURI/decodeURI/isNaN/<br>  isFinite/eval<br>  (1)一次性定时器<br> 开启定时器<br>  var timer=setTimeout(回调函数, 间隔的时间);<br>  当间隔时间到了，执行回调函数；单位是毫秒<br> 清除定时器<br>  clearTimeout(timer);<br> (2)周期性定时器<br> 开启定时器<br>  var timer=setInterval(回调函数, 间隔的时间);<br>  每隔一段时间，执行一次回调函数<br> 清除定时器<br>  clearInterval(timer)<br> 练习：使用周期性定时器，每隔3秒钟打印hello，打印4次后，清除定时器。<br> (3)立即执行定时器(了解)<br> process.nextTick(回调函数)<br> 在当前事件的结尾执行</p>
-<p> var timer=setImmediate(回调函数)<br> 清除  clearImmediate(timer)<br> 在下一组事件的开头执行</p>
-<p>5.文件系统模块——fs<br>  用于操作服务器的文件(目录)，例如：创建目录、删除目录、读取目录、创建文件、删除文件、写入文件….<br> (1)创建目录<br>   fs.mkdir(路径, 回调函数)<br>   fs.mkdirSync(路径)<br> (2)移除目录<br>   fs.rmdir(路径, 回调函数)<br> (3)读取目录<br>   fs.readdir(路径, 回调函数)   —— 异步<br>   fs.readdirSync(路径)        —— 同步<br>对比同步和异步的区别<br>  同步会阻止后续代码的执行，只有执行完以后才会执行后续代码；是通过返回值来获取结果。<br>  异步不会阻止后续代码的执行，在整个程序的最后执行，是通过回调函数来获取结果。常用于一些比较耗时的操作。<br> (4)写入文件<br>  fs.writeFile(文件路径, 数据, 回调函数)<br>  如果文件不存在，则会创建文件，然后写入数据；如果文件已经存在，则会清空文件的内容，然后写入<br>课后任务<br>  (1)复习今天内容，整理思维导图<br>  (2)练习<br>    创建目录mydir，在该目录下创建文件1.txt，同时写入数据abc，创建文件2.txt，写入数据hello；读取mydir目录，删除mydir(全部使用同步方法)。<br>  (3)预习http协议</p>
+                <p>变量？<br>内存中存储数据的一片空间<br>变量的分类？<br>—全局变量<br>1，var在全局的变量  2，非严格模式下不带var的变量 eg: a=1;由程序自动声明一个变量放在当前作用域前<br>—局部变量   1，声明在局部作用域 2，函数的形参</p>
+<p>赋值操作的返回值就是等号右边的内容</p>
+<p>什么是返回值？return<br>返回值做几件事？<br>1，    返回函数调用的结果,return的就是它右边那一块，直到分号结束。<br>2，    终止当前函数的执行<br>什么时候需要return?<br>如果函数没有return，但是非要一个返回值，结果undefind</p>
+<p>什么情况下产生undefined？<br>1，    声明了变量未赋值<br>2，    函数没有return, 程序默认返回undefined<br>3，    声明了一个函数有形参，但是不给形参赋值，默认undefined来补位，多了不接，按顺序读。（未指定实参由undefined按顺序补位）多余的实参会被忽略。<br>4，    访问数组不存在的项<br>5，    访问对象不存在的属性</p>
+<p>区别：访问权限的问题—》局部只能在当前作用域或者当前作用域的子定义域，全局在哪儿都行。</p>
+<p>前加加和后加加区别<br>Var a=1;<br>++a<br>a++<br>对变量而言：无区别，都会自增1<br>对表达式而言：前++：返回新值（+1后的值）<br>              后++：返回旧值（+1之前的值）</p>
+<p>值传递（复印）<br>函数的调用需要传入变量作为实参时:<br>1，    传递值—》针对原始类型而言，如string/number/boolean等，将原变量的值复制一份作为实参，今后对该实参做的所有操作与变量无关<br>2，    址传递—》针对引用类型而言，如函数function/object/array等</p>
+<p>今日区分：全局变量，局部变量，return<br>//获取指定范围内的n个不重复的随机数<br>function fun(min,max,n){<br>var res=[];//存储结果<br>for (var i=0;i&lt;n ;i++ )//外层负责生成随机数<br>{//获取指定范围（min~max之间）的随机数Math.random()<em>(max-min+1)+min<br>var num=parseInt(Math.random()</em>(max-min+1)+min);<br>res.push(num);<br>  for (var j=0;j&lt;i ;j++ ){//内层判断是否重复<br>      if (num==res[j]){//拿循环当次获得的随机数与res现存的每一项比较，如果重复就删掉<br>      res.pop();       //同时重复一遍随机，如果当前项已经重复就没必要继续判断<br>      i–;<br>      break;<br>   }<br>  }<br>}<br>return res;//返回结果<br>}<br>var arr=fun(1,5,5);<br>console.log(arr);</p>
+<p>//或者//</p>
+<p>function fun(min,max,n){<br>var res=[];//存储结果<br>for (var i=0;i&lt;n ;i++ )<br>{//获取指定范围（min~max之间）的随机数Math.random()<em>(max-min+1)+min<br>var num=parseInt(Math.random()</em>(max-min+1)+min);<br>  if (res.indexOf(num)==-1){<br>//记录num在res第一次出现的下标<br>      //如果res没有num,返回-1<br>      res.push(num);<br>  }else{<br>  i–;<br>  }<br>}<br>return res;//返回结果<br>}<br>var arr=fun(1,5,5);<br>console.log(arr);</p>
+<p>//方案3:<br>function fun(min,max,n){<br>var res=[ ];<br>var obj={ VB };<br>for (var i=0;i&lt;n ;i++ ){<br>  var num=parseInt(Math.random()*(max-min+1)+min);<br>  if (obj[num]==undefined){<br>      obj[num]=0;//用获得的随机数做标记<br>      res.push(num);<br>  }else{<br>  i–;<br>  }</p>
+<p>}<br>return res;//返回结果<br>}<br>var arr=fun(1,5,5);<br>console.log(arr);<br>//方案3:</p>
 
             </div>
             <hr>
@@ -423,7 +431,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/20/课堂笔记nodejs-day02/" class="b-link-green">课堂笔记nodejs_day02</a>
+                    <a href="/2018/12/20/面试题/" class="b-link-green">面试题</a>
                 </p>
             </div>
         </div>
@@ -443,7 +451,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2018/12/20/面试题/">
                     <div class="card-image">
@@ -458,9 +466,9 @@
                     <div class="summary">变量？内存中存储数据的一片空间变量的分类？—全局变量1，var在全局的变量  2，非严格模式下不带var的变量 eg: a=1;由程序自动声明一个变量放在当前作用域前—局部变量   1，声明在局部作用域 2，函数的形参
 赋值操作的返回值就是</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -469,6 +477,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -477,17 +486,17 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/20/课堂笔记node-js-day01/">
+                <a href="/2018/12/20/课堂笔记nodejs-day02/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="课堂笔记node.js_day01">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="课堂笔记nodejs_day02">
                         
-                        <span class="card-title">课堂笔记node.js_day01</span>
+                        <span class="card-title">课堂笔记nodejs_day02</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习 Math对象 PI/abs()/floor()/ceil()/round()/max()/min()/pow(x,y)/random() Date对象 创建对象   new Date(‘2018/12/25 10:20:30’)   </div>
+                    <div class="summary">复习  ES6  函数中的参数  function add(a,b=2){   }   模板字符串 abc ${ename}  错误处理  语法错误，引用错误，类型错误，范围错误     try{   }catch(err){  }  no</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
