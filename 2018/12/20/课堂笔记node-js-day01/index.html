@@ -5,9 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="课堂笔记js_day06, web前端,blog搭建,基础">
-    <meta name="description" content="复习
-学习一门编程语言的基本步骤(1)了解背景知识：历史、现状、特点、应用场景。(2)搭建开发环境，编写hello world(3)变量和常量(4)数据类型(5)运算符(6)逻辑结构(7)通用小程序(8)函数和对象(9)第三方库、框架(10">
+    <meta name="keywords" content="课堂笔记node.js_day01, web前端,blog搭建,基础">
+    <meta name="description" content="复习 Math对象 PI/abs()/floor()/ceil()/round()/max()/min()/pow(x,y)/random() Date对象 创建对象   new Date(‘2018/12/25 10:20:30’)   ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>课堂笔记js_day06 | 我的博客</title>
+    <title>课堂笔记node.js_day01 | 我的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -246,13 +245,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        课堂笔记js_day06
+                        课堂笔记node.js_day01
                     </div>
                 </div>
             </div>
@@ -274,16 +273,19 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-14
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-20
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>复习</p>
-<p>学习一门编程语言的基本步骤<br>(1)了解背景知识：历史、现状、特点、应用场景。<br>(2)搭建开发环境，编写hello world<br>(3)变量和常量<br>(4)数据类型<br>(5)运算符<br>(6)逻辑结构<br>(7)通用小程序<br>(8)函数和对象<br>(9)第三方库、框架<br>(10)实用的项目</p>
-<p>1.匿名函数<br>  没有名字的函数   function(){    }<br>创建函数——函数声明<br>function  函数名称(){}<br> (1)创建函数——函数表达式<br> var 函数名称=function(形参列表){<br>   函数体<br>   return 返回值;<br> }<br> 调用：函数名称(实参列表)<br> 对比函数声明和函数表达式的区别<br> 函数声明存在函数提升，在任何的位置都可以调用<br> 函数表达式不存在函数提升，必须先创建再调用<br> 练习：使用函数表达式来计算1~100之间的和。<br> (2)匿名函数自调用<br>  创建函数(局部)作用域，防止造成全局污染。<br>  (function(){<br>    函数体//就是局部作用域,创建的变量和函数都是不能被外部访问<br>  })();<br> (3)作为回调函数<br>  把匿名函数作为实参传递给形参，此时的形参就是函数名称<br> function fn(num){<br>    //num就是函数的名称<br>    num();  //调用传递的匿名函数<br> }<br> fn(function(){ … });<br>练习：创建函数add，传递2个参数，2个参数都是以匿名函数的形式传递；在匿名函数中分别返回1个数字。<br>最后在add中计算两个数字相加。<br>2.系统函数(全局函数)<br>  encodeURI   对一个url进行编码<br>  decodeURI   对一个已经编码的url进行解码<br>  parseInt      将数据转为整型<br>  parseFloat    将数据转为浮点型<br>  isNaN  检测一个数据是否为NaN  是-&gt;true 不是-&gt;false<br>  isFinite 检测一个数据是否为有限值，是-&gt;true 不是-&gt;false     1/0 -&gt; Infinity 无限值<br>  eval  执行字符中的表达式  eval(‘1+2’)  -&gt; 3<br> 练习：使用弹出提示框输入一组运算，使用eval执行这组运算。 06_eval.html   06_eval.js<br>3.对象<br> 是一种引用类型的数据，存储在堆内存中。<br> 对象：是一组属性(property)和方法/功能(method)的集合<br> 哪些是对象？<br>  一个手机: 属性有颜色，品牌，尺寸，厚度… 功能有打电话、发短信、照相、聊天、游戏….<br>  一辆汽车：属性有品牌、外观、车型… 功能有代步、撞人、拉货、取暖、乘凉…<br> (1)JS中的对象<br>  内置对象：JS提供的<br>  宿主对象：根据不同的执行环境来划分<br>  自定义对象：自己创建的对象<br> (2)创建自定义对象<br>  ①对象字面量(直接量)<br>  ②内置构造函数<br>  ③自定义构造函数<br>4.使用对象字面量创建对象<br>  使用大括号{ }创建空对象<br>  属性名和属性值之间用冒号隔开<br>  多组属性之间用逗号隔开<br>  属性名中引号可加可不加，如果出现特殊字符，必须添加引号<br> var phone={ color:’red’, ‘made-in’:’china’ };<br> 练习：创建一个部门对象，属性有部门编号，名称，员工数量<br> 练习：创建一个员工对象，属性有编号，姓名，性别，生日，工资，所在部门<br>5.使用内置构造函数创建对象<br>var book=new Object();  //创建一个空对象<br>book.id=103;  //添加属性，属性名不能添加引号<br>book[‘titlte’]=’三国演义’; //添加属性，属性名必须加引号；如果不加引号，会被认为是变量.<br> 练习：创建一个汽车对象，属性有编号，品牌，颜色，价格<br> 练习：创建一个电脑对象，属性有型号，品牌，尺寸，产地<br>6.访问对象中的属性<br> (1)获取属性值<br>  emp.eid<br>  emp[‘ename’]<br> 如果要获取的属性名不存在，返回undefined<br> (2)遍历对象中的属性(for-in)<br>  获取对象中每一个属性名，进而获取属性值<br> for(var key in emp){<br>   //emp 要遍历的对象<br>   //key 要遍历的每一个属性名<br>   //emp[key]  通过属性名获取对应的属性值<br> }<br> 注意：for-in不能遍历预定义(JS默认为每一个对象添加的)属性。<br>练习：创建一个商品对象，包含编号，标题，价格，是否在售(isOnsale)，商品库存量(stockCount)，使用for-in遍历所有的属性。<br>7.检测对象中是否含有某个属性<br>  ‘属性名’  in  对象  // true-&gt;存在  false-&gt;不存在<br>  对象.hasOwnProperty(‘属性名’) //true-&gt;存在 false-&gt;不存在<br>  对象.属性名=== undefined //true-&gt;不存在  false-&gt;存在<br>8.对象中的方法<br> var person={<br>   name: ‘tom’,<br>   say: function(){<br>      this.name  //this指代当前的对象<br>   }<br> }<br> person.say(); //调用对象中的方法<br>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>     创建一个圆对象，添加属性半径，圆周率；添加方法计算周长(getLength)和计算面积(getArea)；分别返回圆的周长和面积<br>  (3)预习JS中的数组</p>
+                <p>复习<br> Math对象<br> PI/abs()/floor()/ceil()/round()/max()/min()/pow(x,y)/random()<br> Date对象<br> 创建对象<br>   new Date(‘2018/12/25 10:20:30’)<br>   new Date(2018,11,25,10,20,30)<br>   计算机元年<br> 获取时间<br>   getFullYear()/Month()/Date()/Hours()/Minutes()/Seconds()<br>   /Milliseconds()/Day()/Time()<br> 设置时间<br>   set…<br>   复制Date对象  new     Date(d1)<br>   两个对象相减，相差的毫秒数<br> 转本地格式<br>   toLocaleString()/toLocaleDateString()/toLocaleTimeString()<br>Number对象<br>  new Number(‘123’)<br>  toFixed(2)/toString()<br>  Number.MAX_VALUE/MIN_VALUE<br>Boolean对象<br>  new Boolean()<br>ES6<br>  块级作用域  let  {}<br>  箭头函数   回调函数一种写法  ()=&gt;{}</p>
+<p>学习一门编程语言的基本步骤<br> (1)了解背景知识：历史、现状、特点、应用场景<br> (2)搭建开发环境：编写hello world<br> (3)变量和常量<br> (4)数据类型<br> (5)运算符<br> (6)逻辑结构<br> (7)通用小程序<br> (8)函数和对象<br> (9)第三方库、框架<br> (10)实用的项目</p>
+<p>1.ES6<br> (1)函数中的参数<br>   ES6允许为形参设置默认值，如果没有传递实参，则自动调用形参的默认值。<br>  function add (num1, num2=7){   }<br> (2)模板字符串<br> <code>在此之间可以写任意形式代码 ${JS语法}</code><br>  练习：创建一个员工对象，包含姓名，性别，生日，工资；使用模板字符串打印员工信息<br>   ‘姓名：<strong>，性别：</strong>….’<br>2.错误处理<br> (1)常见的错误<br>  SyntaxError  语法错误，错误的使用了中文符号,缺少括号…程序不会执行<br>  ReferenceError 应用错误，使用了未声明的变量，会影响后续代码的执行<br>  TypeError  类型错误，错误的使用了数据的类型。例如把变量当函数使用，把对象当函数使用。会影响后续代码的执行<br>  RangeError  范围错误，参数的使用超出了范围，会影响后续代码的执行    例如：new Array(3.5)<br> (2)错误处理<br> try{<br>   尝试执行可能出现错误的代码<br> }catch(err){<br>   捕获出现的错误，把错误信息放入到err中<br>   错误处理的方案<br> }</p>
+<p>3.NODEJS概述<br>  NODEJS基于谷歌的V8引擎(JS解释器)，运行在服务器端的语言，基于JS。<br>  <a href="http://nodejs.org" target="_blank" rel="noopener">http://nodejs.org</a>  英文官网<br>  <a href="http://nodejs.cn" target="_blank" rel="noopener">http://nodejs.cn</a> 中文<br>  对比JS和NODEJS<br>  (1)JS运行在浏览器端，存在兼容性的问题；NODEJS运行在服务器端，不存在兼容性问题。<br>  (2)两者都有内置(ES)对象、自定义对象、宿主对象(根据执行环境的不同)<br>  (3)JS用于网页中的交互效果，NODEJS用于服务器端操作，例如：创建web服务器、操作数据库…<br>  NODEJS的执行方式<br>  脚本模式   node C:/xampp/…./01.js<br>  交互模式<br>    node  回车  进入交互模式<br>    两次ctrl+c或者输入 .exit  退出交互模式<br>  NODEJS特点及应用<br>    支持数万个并发连接<br>    应用于基础社交网络的大规模web应用<br>4.全局对象<br>  NODEJS: global<br>  在交互模式下，声明的变量和创建的函数都是全局对象下的，可以使用global来访问，例如 var a=1;  global.a<br>  在脚本模式下，文件中声明的变量和创建的函数不是全局对象下的，不能使用global来访问<br>  JS: window<br>  在浏览器下，文件中声明的变量和创建的函数是全局对象下的，可以使用window来访问，例如 var a=1; window.a<br> (1)console对象<br>   global.console.log() 打印日志<br>   global.console.info()  打印消息<br>   global.console.warn()  打印警告<br>   global.console.error()  打印错误<br>   global.console.time(‘自定义字符串’);   开始计时<br>   global.console.timeEnd(‘自定义字符串’);  结束计时<br>   自定义字符串前后要保持一致<br>  练习：使用计时查看for、while、do-while循环10000次的耗时<br> (2)process<br>   当前计算机的进程<br>   process.arch  查看当前CPU的架构  X64<br>   process.platform  查看当前的操作系统   win32<br>   process.env  查看当前的环境变量有哪些<br>   process.version  查看当前nodejs的版本号<br>   process.pid  查看当前的进行编号<br>   process.kill(编号)  杀死某个编号的进程<br> (3)Buffer<br>   缓冲区：在内存中存储数据的区域，存储网络传输时的资源。<br>   创建buffer<br>     var buf=Buffer.alloc(5, ‘abcde’);<br>   将buffer数据转为普通字符串<br>     buf.toString()<br>   练习：创建两个buffer区域，分别存储两个数字，计算两个数字相加。<br>5.模块系统<br>  模块是一个预定义好的功能体，在nodejs下，每一个文件都是一个模块。<br>  在NODEJS下分为自定义模块、核心模块(官方提供)、第三方模块<br>  在NODEJS下，一个文件就是一个模块，文件中的代码默认是被一个构造函数所包含。<br>  以下红色的代码都是nodejs自动为每个文件添加的。<br>(function(exports,require,module,<strong>filename,</strong>dirname){<br>  程序编写的代码<br>})<br><strong>filename  当前文件的完整路径和文件名称
+</strong>dirname  当前文件的完整路径<br>require  是一个函数，用于引入模块；  require(‘./07_2.js’)<br>module  指代当前的模块<br>  module.exports  当前模块导出的对象（公开的内容），可以供其它的模块使用的属性和方法。<br>exports  等价于module.exports</p>
+<p>课后任务：<br>  (1)复习今天内容，整理思维导图<br>  (2)练习：<br>    创建两个模块 main.js(主模块)，circle.js(功能模块)；在功能模块中创建两个函数，传递1个参数作为半径，分别获取圆的周长和面积，导出(公开)两个函数；在主模块中引入功能模块，调用两个函数。<br>  (3)预习模块系统， querystring、url</p>
 
             </div>
             <hr>
@@ -422,7 +424,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">我的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/14/课堂笔记js-day06/" class="b-link-green">课堂笔记js_day06</a>
+                    <a href="/2018/12/20/课堂笔记node-js-day01/" class="b-link-green">课堂笔记node.js_day01</a>
                 </p>
             </div>
         </div>
@@ -442,23 +444,23 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
-                <a href="/2018/12/20/课堂笔记js-day07/">
+                <a href="/2018/12/20/课堂笔记node-js-day01/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="课堂笔记js_day07">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="课堂笔记node.js_day01">
                         
-                        <span class="card-title">课堂笔记js_day07</span>
+                        <span class="card-title">课堂笔记node.js_day01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">复习匿名函数  function(){   }函数声明  function fn(){    }创建函数——函数表达式   var fn=function(a,b){ return a+b; }匿名函数自调用 (function(){   </div>
+                    <div class="summary">复习 Math对象 PI/abs()/floor()/ceil()/round()/max()/min()/pow(x,y)/random() Date对象 创建对象   new Date(‘2018/12/25 10:20:30’)   </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -467,6 +469,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -475,20 +478,20 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/14/函数作用域/">
+                <a href="/2018/12/20/课堂笔记js-day09/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="���ñʼ�js_day05">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="课堂笔记js_day09">
                         
-                        <span class="card-title">���ñʼ�js_day05</span>
+                        <span class="card-title">课堂笔记js_day09</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">//����һvar scope=”global”��function fun(){  console.log(scope);  var scope=”local”��  console.log(scope);}fun();console.</div>
+                    <div class="summary">复习  数组  push()/pop()/unshift()/shift()  二维数组  数组中每个元素还是数组  [ [],[],[],[],[] ]  字符串对象  new String(12)    转义字符  \   \’  \n</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-14
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
                             </span>
                         <span class="publish-author">
                             
